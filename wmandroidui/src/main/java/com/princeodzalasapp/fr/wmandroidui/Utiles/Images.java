@@ -25,4 +25,11 @@ public class Images {
         nlogo.setImageDrawable(mImage);
     }
 
+    public static void setIconicsDrawable(ImageView myImagetView, String nomImage, String sCouleur, Context mContext){
+        Drawable mImage =  new IconicsDrawable(mContext, nomImage);
+        myImagetView.setImageDrawable(mImage);
+        myImagetView.setColorFilter(Color.parseColor(sCouleur), PorterDuff.Mode.SRC_IN);
+
+    }
+
 }
