@@ -10,7 +10,6 @@
 		android:id="@+id/btn_id"
 		style="@style/Widget.MaterialComponents.Button"
 		android:layout_gravity="center"
-		android:layout_margin="6dp"
-		android:text="Ajouter du text"/>
+		android:layout_margin="6dp"/>
 		
 </LinearLayout>
