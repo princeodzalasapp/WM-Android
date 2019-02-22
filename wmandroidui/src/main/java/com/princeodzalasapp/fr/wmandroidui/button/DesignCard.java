@@ -1,11 +1,10 @@
 package com.princeodzalasapp.fr.wmandroidui.button;
 
 import android.content.Context;
-import android.support.design.card.MaterialCardView;
+import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 
-
-public class DesignCard extends MaterialCardView {
+public class DesignCard extends CardView {
 
     public DesignCard(Context context) {
         super(context);
