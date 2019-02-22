@@ -61,3 +61,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+//
+//task deleteJar(type: Delete) {
+//    delete 'libs/jars/wm_library_ui_0.1.2.jar'
+//}
+//
+//task createJar(type: Copy) {
+//    from('build/intermediates/bundles/release/')
+//    into('libs/jars/')
+//    include('classes.jar')
+//    rename('classes.jar', 'wm_library_ui_0.1.2.jar')
+//}
+//
+//createJar.dependsOn(deleteJar, build)

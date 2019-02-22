@@ -6,8 +6,8 @@
     android:orientation="vertical"
 	android:layout_gravity="center">
 	
-	<com.firebase.ui.auth.util.ui.SupportVectorDrawablesButton
-		android:id="@+id/btn_google"
+	<com.princeodzalasapp.fr.wmandroidui.button.LoginButton
+		android:id="@+id/login_button_ggle"
 		android:layout_gravity="center"
 		style="@style/FirebaseUI.Button.AccountChooser.GoogleButton"
 		android:text="@string/fui_sign_in_with_google"
