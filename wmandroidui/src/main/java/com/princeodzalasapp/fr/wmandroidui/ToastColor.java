@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 import es.dmoral.toasty.Toasty;
 
-public class ToatColor {
+public class ToastColor {
 
     public static void info(String message, Context mContext){
         Toasty.info(mContext, message, Toast.LENGTH_SHORT, true).show();
