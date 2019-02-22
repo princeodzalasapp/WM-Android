@@ -6,7 +6,7 @@
     android:orientation="vertical"
 	android:layout_gravity="center">
 	
-	<android.support.design.button.MaterialButton
+	<com.princeodzalasapp.fr.wmandroidui.button.DesignButton
 		android:id="@+id/btn_id"
 		style="@style/Widget.MaterialComponents.Button"
 		android:layout_gravity="center"
