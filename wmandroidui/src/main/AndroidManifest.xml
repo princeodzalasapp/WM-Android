@@ -1,2 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.princeodzalasapp.fr.wmandroidui" />
+    package="com.princeodzalasapp.fr.wmandroidui" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
