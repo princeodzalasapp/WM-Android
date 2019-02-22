@@ -13,6 +13,8 @@
         <item name="android:statusBarColor">@color/primaryDarkColor</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:typeface">sans</item>
+        <item name="colorButtonNormal">@color/primaryDarkColor</item>
+        <item name="colorControlHighlight">@color/primaryColor</item>
         <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
         <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2</item>
         <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialComponents.Headline3</item>
@@ -33,6 +35,17 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="PrimaryButton" parent="Theme.AppCompat">
+        <item name="colorButtonNormal">@color/primaryDarkColor</item>
+        <item name="colorControlHighlight">@color/primaryColor</item>
+    </style>
+
+    <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="colorControlHighlight">@color/primaryColor</item>
+        <item name="colorAccent">@color/primaryDarkColor</item>
     </style>
 
 

@@ -11,8 +11,6 @@
 		style="@style/Widget.MaterialComponents.Button"
 		android:layout_gravity="center"
 		android:layout_margin="6dp"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
 		android:text="Ajouter du text"/>
 		
 </LinearLayout>
