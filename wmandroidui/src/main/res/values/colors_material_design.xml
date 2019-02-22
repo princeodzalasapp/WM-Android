@@ -255,6 +255,7 @@
     <color name="couleur_marron800">#ff4e342e</color>
     <color name="couleur_marron900">#ff3e2723</color>
 
+    <color name="couleur_gris10">#ffcccccc</color>
     <color name="couleur_gris50">#fffafafa</color>
     <color name="couleur_gris100">#fff5f5f5</color>
     <color name="couleur_gris200">#ffeeeeee</color>
