@@ -16,7 +16,7 @@ public class Interstitial {
     public static InterstitialAd interstitialAd;
     public static com.google.android.gms.ads.InterstitialAd interstitial;
 
-    public static void Fecebook(String PubId,final int delaySec, Context mContext){
+    public static void Facebook(String PubId,final int delaySec, Context mContext){
         interstitialAd = new InterstitialAd(mContext, PubId);
         interstitialAd.setAdListener(new InterstitialAdListener() {
             @Override
