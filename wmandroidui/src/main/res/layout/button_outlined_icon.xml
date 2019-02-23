@@ -6,6 +6,7 @@
 	android:layout_height="match_parent"
 	style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
 	android:id="@+id/btn_outlined_icon"
+	android:textAllCaps="false"
 	android:layout_gravity="center"
 	android:layout_margin="6dp">
 		

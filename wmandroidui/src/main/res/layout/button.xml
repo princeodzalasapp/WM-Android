@@ -7,6 +7,7 @@
 	style="@style/Widget.MaterialComponents.Button"
 	android:id="@+id/btn"
 	android:layout_gravity="center"
+	android:textAllCaps="false"
 	android:layout_margin="6dp">
 		
 </com.princeodzalasapp.fr.wmandroidui.button.DesignButton>

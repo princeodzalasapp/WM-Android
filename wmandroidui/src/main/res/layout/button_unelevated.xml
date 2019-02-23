@@ -7,6 +7,7 @@
 	style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
 	android:id="@+id/btn_unelevated"
 	android:layout_gravity="center"
+	android:textAllCaps="false"
 	android:layout_margin="6dp">
 		
 </com.princeodzalasapp.fr.wmandroidui.button.DesignButton>

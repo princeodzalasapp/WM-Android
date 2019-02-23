@@ -6,6 +6,7 @@
 	android:layout_height="match_parent"
 	style="@style/Widget.MaterialComponents.Button.TextButton"
 	android:id="@+id/btn_text"
+	android:textAllCaps="false"
 	android:layout_gravity="center"
 	android:layout_margin="6dp">
 		

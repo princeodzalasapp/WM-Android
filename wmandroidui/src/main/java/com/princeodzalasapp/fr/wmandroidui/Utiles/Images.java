@@ -32,4 +32,9 @@ public class Images {
 
     }
 
+    public static Drawable getIconicsDrawable(String nomImage, Context mContext){
+        Drawable mImage =  new IconicsDrawable(mContext, nomImage);
+        return  mImage;
+    }
+
 }
