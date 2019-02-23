@@ -40,6 +40,8 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
         addItemType(MultipleItem.TEXT_NORMAL_BLANC, R.layout.text_item_blanc );
         addItemType(MultipleItem.TEXT_IMAGE, R.layout.text_image );
         addItemType(MultipleItem.TEXT_IMAGE_BLANC, R.layout.text_image_blanc );
+        addItemType(MultipleItem.TEXT_ICON, R.layout.text_icon );
+        addItemType(MultipleItem.TEXT_ICON_BLANC, R.layout.text_icon_blanc );
         addItemType(MultipleItem.CARD_RECYCLER, R.layout.card_recycler );
         addItemType(MultipleItem.CARD_IMAGE, R.layout.card_image );
         addItemType(MultipleItem.CARD_IMAGE_TITRE, R.layout.card_image_titre );
@@ -153,6 +155,20 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
                 snom4.setText(item.getListeUrl().getNom());
                 Glide.with(mContext).load(item.getListeUrl().getImageUrl()).into(simageUrl4);
                 if (item.getListeUrl().getColor() != null ) snom4.setTextColor(Color.parseColor(item.getListeUrl().getColor()));
+                break;
+            case MultipleItem.TEXT_ICON:
+                TextView snom5 = helper.getView(R.id.list_titre);
+                ImageView simageUrl5 = helper.getView(R.id.list_logo);
+                snom5.setText(item.getListeUrl().getNom());
+                Glide.with(mContext).load(item.getListeUrl().getImageUrl()).into(simageUrl5);
+                if (item.getListeUrl().getColor() != null ) snom5.setTextColor(Color.parseColor(item.getListeUrl().getColor()));
+                break;
+            case MultipleItem.TEXT_ICON_BLANC:
+                TextView snom6 = helper.getView(R.id.list_titre);
+                ImageView simageUrl6 = helper.getView(R.id.list_logo);
+                snom6.setText(item.getListeUrl().getNom());
+                Glide.with(mContext).load(item.getListeUrl().getImageUrl()).into(simageUrl6);
+                if (item.getListeUrl().getColor() != null ) snom6.setTextColor(Color.parseColor(item.getListeUrl().getColor()));
                 break;
             case MultipleItem.PUB_HAUT:
                 break;

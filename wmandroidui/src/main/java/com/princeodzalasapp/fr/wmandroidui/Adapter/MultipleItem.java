@@ -25,6 +25,8 @@ public class MultipleItem implements MultiItemEntity {
     public static final int CARD_RECYCLER = 14;
     public static final int CARD_IMAGE = 15;
     public static final int CARD_IMAGE_TITRE = 16;
+    public static final int TEXT_ICON = 17;
+    public static final int TEXT_ICON_BLANC = 18;
     public static final int LIGNE_100= 20;
     public static final int LIGNE_85= 21;
     private MyActus mActus;
