@@ -9,7 +9,7 @@ public class ValeurAdapter {
     public static String[] resultat;
 
     public static String[] getLigneValeur(MultipleAdapter DistrictAdapt){
-        DistrictAdapt.setOnItemClickListener(new getAdapter() {
+        DistrictAdapt.setOnItemClickListener(new BaseAdapter() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 MultipleItem item = (MultipleItem) adapter.getData().get(position);
