@@ -20,8 +20,6 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbarThumbVertical="android:transparent"
-        android:scrollbarTrackVertical="android:transparent"/>
+        android:layout_height="wrap_content"/>
 
 </com.princeodzalasapp.fr.wmandroidui.button.DesignCard>
