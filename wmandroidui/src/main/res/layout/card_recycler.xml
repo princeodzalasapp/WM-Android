@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.princeodzalasapp.fr.wmandroidui.button.DesignCard
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_vide"
+    android:theme="@style/MdTheme"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="9dp"
+    android:layout_marginRight="9dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="1dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="android:transparent"
+        android:scrollbarTrackVertical="android:transparent"/>
+
+</com.princeodzalasapp.fr.wmandroidui.button.DesignCard>

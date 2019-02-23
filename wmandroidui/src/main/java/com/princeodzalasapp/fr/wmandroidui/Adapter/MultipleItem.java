@@ -18,13 +18,27 @@ public class MultipleItem implements MultiItemEntity {
     public static final int LIST_VIDEO = 7;
     public static final int LISTE_NORMAL_ICON = 8;
     public static final int LISTE_NORMAL_IMAGE = 9;
+    public static final int TEXT_NORMAL = 10;
+    public static final int TEXT_NORMAL_BLANC = 11;
+    public static final int TEXT_IMAGE = 12;
+    public static final int TEXT_IMAGE_BLANC = 13;
+    public static final int CARD_RECYCLER = 14;
+    public static final int CARD_IMAGE = 15;
+    public static final int CARD_IMAGE_TITRE = 16;
+    public static final int LIGNE_100= 20;
+    public static final int LIGNE_85= 21;
     private MyActus mActus;
     private MyVideo mVideo;
     private MyListe mListe;
     private MyListeIcon mListeIcon;
     private MyListeUrl mListeUrl;
+    private String mtext;
     private int itemType;
 
+    public MultipleItem(int itemType, String mtext) {
+        this.mtext = mtext;
+        this.itemType = itemType;
+    }
     public MultipleItem(int itemType, MyActus mActus) {
         this.mActus = mActus;
         this.itemType = itemType;
@@ -49,6 +63,9 @@ public class MultipleItem implements MultiItemEntity {
         this.itemType = itemType;
     }
 
+    public String getText() {
+        return mtext;
+    }
     public MyActus getActus() {
         return mActus;
     }

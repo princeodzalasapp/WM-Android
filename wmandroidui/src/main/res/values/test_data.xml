@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="clubs">
+        <item>Barcelone</item>
+        <item>Paris SG</item>
+        <item>Man United</item>
+        <item>Real Madrid</item>
+        <item>Liverpool</item>
+        <item>Juventus</item>
+        <item>Bayern Munich</item>
+        <item>As Monaco</item>
+        <item>Milan AC</item>
+        <item>Arsenal</item>
+    </string-array>
+
+</resources>
