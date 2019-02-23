@@ -7,7 +7,7 @@
     android:layout_gravity="center">
 
     <com.princeodzalasapp.fr.wmandroidui.button.LoginButton
-        android:id="@+id/login_button_ggle"
+        android:id="@+id/login_button_phone"
         android:layout_gravity="center"
         style="@style/FirebaseUI.Button.AccountChooser.PhoneButton"
         android:text="@string/fui_sign_in_with_phone"
