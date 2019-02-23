@@ -28,7 +28,7 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
         super(data);
         addItemType(MultipleItem.LISTE_NORMAL, R.layout.card_liste );
         addItemType(MultipleItem.LISTE_NORMAL_ICON, R.layout.card_liste_icon );
-        addItemType(MultipleItem.LISTE_NORMAL_IMAGE, R.layout.card_liste_icon );
+        addItemType(MultipleItem.LISTE_NORMAL_IMAGE, R.layout.card_liste_url );
         addItemType(MultipleItem.LIST_ACTUS, R.layout.card_actus );
         addItemType(MultipleItem.LIST_VIDEO, R.layout.card_video );
         addItemType(MultipleItem.PUB_HAUT, R.layout.pub_natif_haut );
