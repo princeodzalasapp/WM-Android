@@ -2,14 +2,18 @@
 <com.princeodzalasapp.fr.wmandroidui.button.DesignCard
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_list_titre"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_list_image_titre"
     android:theme="@style/MdTheme"
     android:layout_centerInParent="true"
     android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:foreground="?android:selectableItemBackground"
-    android:layout_margin="5dp"
+    android:layout_marginLeft="9dp"
+    android:layout_marginRight="9dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="1dp"
     android:focusable="true"
     android:clickable="true"
     app:cardPreventCornerOverlap="true"
@@ -23,12 +27,21 @@
         android:padding="6dp"
         android:orientation="horizontal">
 
+        <ImageView
+            android:id="@+id/list_logo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            tools:ignore="ContentDescription" />
+
         <TextView
             android:id="@+id/list_titre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="6dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="5dp"
             android:maxLines="1"
             android:singleLine="true"/>
 
