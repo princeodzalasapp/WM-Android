@@ -12,8 +12,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.princeodzalasapp.fr.wmandroidui.R;
 import com.princeodzalasapp.fr.wmandroidui.Utiles.Images;
@@ -31,12 +29,12 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
         addItemType(MultipleItem.LISTE_NORMAL, R.layout.card_liste );
         addItemType(MultipleItem.LISTE_NORMAL_ICON, R.layout.card_liste_icon );
         addItemType(MultipleItem.LISTE_NORMAL_IMAGE, R.layout.card_liste_icon );
+        addItemType(MultipleItem.LIST_ACTUS, R.layout.card_actus );
+        addItemType(MultipleItem.LIST_VIDEO, R.layout.card_video );
         addItemType(MultipleItem.PUB_HAUT, R.layout.pub_natif_haut );
         addItemType(MultipleItem.PUB_BAS, R.layout.pub_natif_bas );
         addItemType(MultipleItem.PUB_MILIEU, R.layout.pub_natif );
         addItemType(MultipleItem.LIST_ESPACE, R.layout.espace );
-        addItemType(MultipleItem.LIST_ACTUS, R.layout.card_actus );
-        addItemType(MultipleItem.LIST_VIDEO, R.layout.card_video );
         this.mContext = context;
     }
 
@@ -58,14 +56,6 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
                 ImageView imageUrl2 = helper.getView(R.id.list_logo);
                 nom2.setText(item.getListe().getNom());
                 Glide.with(mContext).load(item.getListeIcon().getImageUrl()).into(imageUrl2);
-                break;
-            case MultipleItem.PUB_HAUT:
-                break;
-            case MultipleItem.PUB_BAS:
-                break;
-            case MultipleItem.PUB_MILIEU:
-                break;
-            case MultipleItem.LIST_ESPACE:
                 break;
             case MultipleItem.LIST_ACTUS:
                 TextView tnom = helper.getView(R.id.nom);
@@ -114,6 +104,14 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
                 nnom.setText(item.getVideo().getNom());
                 data.setText(getDateYoutube(item.getVideo().getDate()));
                 Glide.with(mContext).load(item.getVideo().getImageUrl()).apply(new RequestOptions().fitCenter()).into(nimageUrl);
+                break;
+            case MultipleItem.PUB_HAUT:
+                break;
+            case MultipleItem.PUB_BAS:
+                break;
+            case MultipleItem.PUB_MILIEU:
+                break;
+            case MultipleItem.LIST_ESPACE:
                 break;
         }
     }
