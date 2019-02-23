@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.princeodzalasapp.fr.wmandroidui.button.LoginButton
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:theme="@style/MdTheme"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	style="@style/FirebaseUI.Button.AccountChooser.FacebookButton"
-	android:text="@string/fui_sign_in_with_facebook"
-	android:id="@+id/login_button_fb"
-	android:layout_gravity="center"
-	android:layout_margin="6dp">
+	android:orientation="vertical"
+	android:layout_gravity="center">
 
-</com.princeodzalasapp.fr.wmandroidui.button.LoginButton>
+	<com.princeodzalasapp.fr.wmandroidui.button.LoginButton
+		android:id="@+id/login_button_fb"
+		android:layout_gravity="center"
+		style="@style/FirebaseUI.Button.AccountChooser.FacebookButton"
+		android:text="@string/fui_sign_in_with_facebook"
+		android:layout_margin="6dp"/>
+
+</LinearLayout>

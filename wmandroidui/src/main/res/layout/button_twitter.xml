@@ -7,10 +7,10 @@
     android:layout_gravity="center">
 
     <com.princeodzalasapp.fr.wmandroidui.button.LoginButton
-        android:id="@+id/login_button_ggle"
+        android:id="@+id/login_button_twitter"
         android:layout_gravity="center"
-        style="@style/FirebaseUI.Button.AccountChooser.GoogleButton"
-        android:text="@string/fui_sign_in_with_google"
+        style="@style/FirebaseUI.Button.AccountChooser.TwitterButton"
+        android:text="@string/fui_sign_in_with_twitter"
         android:layout_margin="6dp"/>
 
 </LinearLayout>

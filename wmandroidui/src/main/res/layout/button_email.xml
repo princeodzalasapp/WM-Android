@@ -9,8 +9,8 @@
     <com.princeodzalasapp.fr.wmandroidui.button.LoginButton
         android:id="@+id/login_button_ggle"
         android:layout_gravity="center"
-        style="@style/FirebaseUI.Button.AccountChooser.GoogleButton"
-        android:text="@string/fui_sign_in_with_google"
+        style="@style/FirebaseUI.Button.AccountChooser.EmailButton"
+        android:text="@string/fui_sign_in_with_email"
         android:layout_margin="6dp"/>
 
 </LinearLayout>
