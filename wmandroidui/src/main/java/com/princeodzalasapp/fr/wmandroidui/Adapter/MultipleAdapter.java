@@ -105,16 +105,5 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
         }
     }
 
-    public void importlib(){
-        ArrayList<MultipleItem> mData = new ArrayList<>();
-        MultipleAdapter DistrictAdapt = new MultipleAdapter(mContext, mData);
-        DistrictAdapt.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                MultipleItem item = (MultipleItem) adapter.getData().get(position);
-            }
-        });
-    }
-
 
 }
