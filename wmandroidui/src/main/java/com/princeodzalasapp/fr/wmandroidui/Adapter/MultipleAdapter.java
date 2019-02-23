@@ -3,6 +3,7 @@ package com.princeodzalasapp.fr.wmandroidui.Adapter;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.CardView;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -11,6 +12,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.princeodzalasapp.fr.wmandroidui.R;
 
@@ -100,6 +103,17 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
                 Glide.with(mContext).load(item.getVideo().getImageUrl()).apply(new RequestOptions().fitCenter()).into(nimageUrl);
                 break;
         }
+    }
+
+    public void importlib(){
+        ArrayList<MultipleItem> mData = new ArrayList<>();
+        MultipleAdapter DistrictAdapt = new MultipleAdapter(mContext, mData);
+        DistrictAdapt.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                MultipleItem item = (MultipleItem) adapter.getData().get(position);
+            }
+        });
     }
 
 
