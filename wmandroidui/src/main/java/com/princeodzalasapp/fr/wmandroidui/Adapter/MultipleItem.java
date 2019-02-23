@@ -3,6 +3,7 @@ package com.princeodzalasapp.fr.wmandroidui.Adapter;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.princeodzalasapp.fr.wmandroidui.models.MyActus;
 import com.princeodzalasapp.fr.wmandroidui.models.MyListe;
+import com.princeodzalasapp.fr.wmandroidui.models.MyListeIcon;
 import com.princeodzalasapp.fr.wmandroidui.models.MyVideo;
 
 public class MultipleItem implements MultiItemEntity {
@@ -14,9 +15,12 @@ public class MultipleItem implements MultiItemEntity {
     public static final int LIST_ESPACE = 5;
     public static final int LIST_ACTUS = 6;
     public static final int LIST_VIDEO = 7;
+    public static final int LISTE_NORMAL_ICON = 8;
+    public static final int LISTE_NORMAL_IMAGE = 9;
     private MyActus mActus;
     private MyVideo mVideo;
     private MyListe mListe;
+    private MyListeIcon mListeIcon;
     private int itemType;
 
     public MultipleItem(int itemType, MyActus mActus) {
@@ -29,6 +33,10 @@ public class MultipleItem implements MultiItemEntity {
     }
     public MultipleItem(int itemType, MyListe mListe) {
         this.mListe = mListe;
+        this.itemType = itemType;
+    }
+    public MultipleItem(int itemType, MyListeIcon mListeIcon) {
+        this.mListeIcon = mListeIcon;
         this.itemType = itemType;
     }
     public MultipleItem(int itemType) {
@@ -44,6 +52,10 @@ public class MultipleItem implements MultiItemEntity {
     public MyListe getListe() {
         return mListe;
     }
+    public MyListeIcon getListeIcon() {
+        return mListeIcon;
+    }
+
     @Override
     public int getItemType() {
         return itemType;

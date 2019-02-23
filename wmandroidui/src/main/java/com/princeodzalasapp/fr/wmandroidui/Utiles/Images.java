@@ -27,6 +27,11 @@ public class Images {
         nlogo.setImageDrawable(mImage);
     }
 
+    public static void setIcon(ImageView nlogo, String nImage, Context mContext){
+        Drawable mImage =  new IconicsDrawable(mContext, nImage);
+        nlogo.setImageDrawable(mImage);
+    }
+
     public static void setImageUrl(ImageView myImagetView, String nomUrl, Context mContext){
         myImagetView.setTag(10000);
         Glide.with(mContext).load(nomUrl).apply(new RequestOptions().centerCrop()).into(myImagetView);

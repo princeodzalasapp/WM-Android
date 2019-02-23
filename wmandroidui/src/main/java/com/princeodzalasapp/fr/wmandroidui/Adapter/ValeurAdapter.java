@@ -9,14 +9,14 @@ public class ValeurAdapter {
     public static String[] resultat;
 
     public static String[] getLigneValeur(MultipleAdapter DistrictAdapt){
-        DistrictAdapt.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+        DistrictAdapt.setOnItemClickListener(new getAdapter() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 MultipleItem item = (MultipleItem) adapter.getData().get(position);
-                if (item.getListe() != null) {
-                    resultat[0] = item.getListe().getCode();
-                    resultat[1] = item.getListe().getNom();
-                    resultat[2] = item.getListe().getImageUrl();
+                if (item.getListeIcon() != null) {
+                    resultat[0] = item.getListeIcon().getCode();
+                    resultat[1] = item.getListeIcon().getNom();
+                    resultat[2] = item.getListeIcon().getImageUrl();
                 }
             }
         });

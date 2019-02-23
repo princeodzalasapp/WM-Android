@@ -16,6 +16,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.princeodzalasapp.fr.wmandroidui.R;
+import com.princeodzalasapp.fr.wmandroidui.Utiles.Images;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,8 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
     public MultipleAdapter(Context context, ArrayList<MultipleItem> data) {
         super(data);
         addItemType(MultipleItem.LISTE_NORMAL, R.layout.card_liste );
+        addItemType(MultipleItem.LISTE_NORMAL_ICON, R.layout.card_liste_icon );
+        addItemType(MultipleItem.LISTE_NORMAL_IMAGE, R.layout.card_liste_icon );
         addItemType(MultipleItem.PUB_HAUT, R.layout.pub_natif_haut );
         addItemType(MultipleItem.PUB_BAS, R.layout.pub_natif_bas );
         addItemType(MultipleItem.PUB_MILIEU, R.layout.pub_natif );
@@ -42,9 +45,19 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
         switch (helper.getItemViewType()) {
             case MultipleItem.LISTE_NORMAL:
                 TextView nom = helper.getView(R.id.list_titre);
-                ImageView imageUrl = helper.getView(R.id.list_logo);
                 nom.setText(item.getListe().getNom());
-                Glide.with(mContext).load(item.getListe().getImageUrl()).into(imageUrl);
+                break;
+            case MultipleItem.LISTE_NORMAL_ICON:
+                TextView nom1 = helper.getView(R.id.list_titre);
+                ImageView imageUrl1 = helper.getView(R.id.list_logo);
+                nom1.setText(item.getListe().getNom());
+                Images.setIcon(imageUrl1,item.getListeIcon().getImageUrl(), mContext);
+                break;
+            case MultipleItem.LISTE_NORMAL_IMAGE:
+                TextView nom2 = helper.getView(R.id.list_titre);
+                ImageView imageUrl2 = helper.getView(R.id.list_logo);
+                nom2.setText(item.getListe().getNom());
+                Glide.with(mContext).load(item.getListeIcon().getImageUrl()).into(imageUrl2);
                 break;
             case MultipleItem.PUB_HAUT:
                 break;
