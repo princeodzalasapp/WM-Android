@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.princeodzalasapp.fr.wmandroidui.button.LoginButton
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:theme="@style/MdTheme"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	style="@style/FirebaseUI.Button.AccountChooser.GoogleButton"
+	android:text="@string/fui_sign_in_with_google"
+	android:id="@+id/login_button_ggle"
+	android:layout_gravity="center"
+	android:layout_margin="6dp">
+
+</com.princeodzalasapp.fr.wmandroidui.button.LoginButton>

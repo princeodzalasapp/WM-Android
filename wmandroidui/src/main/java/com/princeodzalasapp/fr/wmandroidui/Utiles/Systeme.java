@@ -1,6 +1,11 @@
 package com.princeodzalasapp.fr.wmandroidui.Utiles;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
+import android.view.View;
+import android.view.Window;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -15,10 +20,25 @@ public class Systeme {
         return dp;
     }
 
+    public static void ActionBarOmbreElevation(int elevation, Context mContext, Activity mActivity){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            View actionbar;
+            // Récupération de l'action bar
+            Window window = mActivity.getWindow();
+            View v = window.getDecorView();
+            int resId = mContext.getResources().getIdentifier("action_bar_container", "id", "android");
+            actionbar = v.findViewById(resId);
+            // Changement de l'élévation pour supprimer l'ombre
+            if (actionbar != null){
+                actionbar.setElevation(DpToPx(elevation, mContext));
+            }
+        }
+    }
+
     public static String getDateYoutube(String date) {
 
         final String ISO_8601_24H_FULL_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
-        DateFormat df = new SimpleDateFormat(ISO_8601_24H_FULL_FORMAT);
+        @SuppressLint("SimpleDateFormat") DateFormat df = new SimpleDateFormat(ISO_8601_24H_FULL_FORMAT);
         String dateString;
         try {
             Date d = df.parse(date);
