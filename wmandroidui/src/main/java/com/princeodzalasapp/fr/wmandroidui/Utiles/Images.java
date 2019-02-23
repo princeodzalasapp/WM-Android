@@ -6,6 +6,8 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.mikepenz.iconics.IconicsDrawable;
 
 public class Images {
@@ -25,10 +27,9 @@ public class Images {
         nlogo.setImageDrawable(mImage);
     }
 
-    public static void setIconicsDrawable(ImageView myImagetView, String nomImage, String sCouleur, Context mContext){
-        Drawable mImage =  new IconicsDrawable(mContext, nomImage);
-        myImagetView.setImageDrawable(mImage);
-        myImagetView.setColorFilter(Color.parseColor(sCouleur), PorterDuff.Mode.SRC_IN);
+    public static void setImageUrl(ImageView myImagetView, String nomUrl, Context mContext){
+        myImagetView.setTag(10000);
+        Glide.with(mContext).load(nomUrl).apply(new RequestOptions().centerCrop()).into(myImagetView);
 
     }
 
