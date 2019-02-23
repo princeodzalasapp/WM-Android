@@ -4,6 +4,7 @@ import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.princeodzalasapp.fr.wmandroidui.models.MyActus;
 import com.princeodzalasapp.fr.wmandroidui.models.MyListe;
 import com.princeodzalasapp.fr.wmandroidui.models.MyListeIcon;
+import com.princeodzalasapp.fr.wmandroidui.models.MyListeUrl;
 import com.princeodzalasapp.fr.wmandroidui.models.MyVideo;
 
 public class MultipleItem implements MultiItemEntity {
@@ -21,6 +22,7 @@ public class MultipleItem implements MultiItemEntity {
     private MyVideo mVideo;
     private MyListe mListe;
     private MyListeIcon mListeIcon;
+    private MyListeUrl mListeUrl;
     private int itemType;
 
     public MultipleItem(int itemType, MyActus mActus) {
@@ -39,6 +41,10 @@ public class MultipleItem implements MultiItemEntity {
         this.mListeIcon = mListeIcon;
         this.itemType = itemType;
     }
+    public MultipleItem(int itemType, MyListeUrl mListeUrl) {
+        this.mListeUrl = mListeUrl;
+        this.itemType = itemType;
+    }
     public MultipleItem(int itemType) {
         this.itemType = itemType;
     }
@@ -54,6 +60,9 @@ public class MultipleItem implements MultiItemEntity {
     }
     public MyListeIcon getListeIcon() {
         return mListeIcon;
+    }
+    public MyListeUrl getListeUrl() {
+        return mListeUrl;
     }
 
     @Override

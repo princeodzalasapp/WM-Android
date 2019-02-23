@@ -48,14 +48,14 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
             case MultipleItem.LISTE_NORMAL_ICON:
                 TextView nom1 = helper.getView(R.id.list_titre);
                 ImageView imageUrl1 = helper.getView(R.id.list_logo);
-                nom1.setText(item.getListe().getNom());
+                nom1.setText(item.getListeIcon().getNom());
                 Images.setIcon(imageUrl1,item.getListeIcon().getImageUrl(), mContext);
                 break;
             case MultipleItem.LISTE_NORMAL_IMAGE:
                 TextView nom2 = helper.getView(R.id.list_titre);
                 ImageView imageUrl2 = helper.getView(R.id.list_logo);
-                nom2.setText(item.getListe().getNom());
-                Glide.with(mContext).load(item.getListeIcon().getImageUrl()).into(imageUrl2);
+                nom2.setText(item.getListeUrl().getNom());
+                Glide.with(mContext).load(item.getListeUrl().getImageUrl()).into(imageUrl2);
                 break;
             case MultipleItem.LIST_ACTUS:
                 TextView tnom = helper.getView(R.id.nom);
