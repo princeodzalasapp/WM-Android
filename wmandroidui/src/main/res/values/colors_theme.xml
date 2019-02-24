@@ -7,5 +7,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorFondGris">#e6e6e6</color>
     <color name="colorFonfBlanc">#ffffff</color>
-
+    <color name="textColorPrimary">#442C2E</color>
+    <color name="toolbarIconColor">@color/primaryColor</color>
+    <color name="colorControlActivated">#FF4081</color>
 </resources>

@@ -4,14 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
 
     <!-- STYLES -->
-    <style name="MdTheme" parent="Theme.MaterialComponents.Light">
+    <style name="MdTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorBackground">@color/colorFondGris</item>
         <item name="colorError">#F44336</item>
         <item name="android:statusBarColor">@color/primaryDarkColor</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:windowTranslucentNavigation">true</item>
+        <item name="colorButtonNormal">@color/primaryColor</item>
+        <item name="colorControlNormal">@color/primaryColor</item>
+        <item name="colorControlHighlight">@color/primaryDarkColor</item>
         <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
         <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2</item>
         <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialComponents.Headline3</item>
@@ -25,10 +31,14 @@
         <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
         <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button</item>
         <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">28sp</item>
         <item name="android:text">sans-serif</item>
+
+        <item name="dialogTheme">@style/Mdheme.Dialog.Green</item>
+        <item name="alertDialogTheme">@style/Mdheme.Dialog.Alert.Green</item>
     </style>
 
     <style name="MdTheme.NoActionBar">
@@ -42,17 +52,67 @@
         <item name="colorControlHighlight">@color/primaryColor</item>
     </style>
 
+    <style name="Mdheme.Dialog.Green" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Green Alert Dialog Theme -->
+    <style name="Mdheme.Dialog.Alert.Green" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.MdTheme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.MdTheme.TextInputLayout.HintText</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="TextAppearance.MdTheme.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.MdTheme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="Widget.MdTheme.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.MdTheme.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorAccent</item>
+        <item name="android:theme">@style/MdTheme</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/TextAppearance.MdTheme.Toolbar</item>
+    </style>
+
+    <style name="TextAppearance.MdTheme.Toolbar" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.MdTheme.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+
+
     <style name="Regular">
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">sans-serif</item>
     </style>
 
     <style name="Italic">
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">sans-serif</item>
     </style>
 
@@ -60,28 +120,28 @@
     <style name="Bold">
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">sans-serif</item>
     </style>
 
     <style name="BoldItalic">
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">bold|italic</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">sans-serif</item>
     </style>
 
     <style name="RegularCondensed">
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">sans-serif-condensed</item>
     </style>
 
     <style name="ItalicCondensed">
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">sans-serif-condensed</item>
     </style>
 
@@ -89,63 +149,63 @@
     <style name="BoldCondensed">
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">sans-serif-condensed</item>
     </style>
 
     <style name="Casual">
         <item name="android:fontFamily">casual</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">Casual</item>
     </style>
 
     <style name="Cursive">
         <item name="android:fontFamily">cursive</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">Cursive</item>
     </style>
 
     <style name="RegularMono">
         <item name="android:fontFamily">monospace</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">mono space</item>
     </style>
 
     <style name="ItalicMono">
         <item name="android:fontFamily">monospace</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">monospace</item>
     </style>
 
     <style name="BoldMono">
         <item name="android:fontFamily">monospace</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">monospace</item>
     </style>
 
     <style name="RegularMonoSerif">
         <item name="android:fontFamily">serif-monospace</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">serif-monospace</item>
     </style>
 
     <style name="ItalicMonoSerif">
         <item name="android:fontFamily">serif-monospace</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">serif-monospace</item>
     </style>
 
     <style name="BoldMonoSerif">
         <item name="android:fontFamily">serif-monospace</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:text">serif-monospace</item>
     </style>
 
