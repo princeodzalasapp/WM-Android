@@ -7,7 +7,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:behavior_hideable="true"
     app:behavior_peekHeight="50dp"
-    android:background="@color/white"
+    android:padding="16dp"
+    android:background="@drawable/bg_bottom_sheet_dialog_fragment"
     app:layout_behavior="@string/bottom_sheet_behavior">
 
 </android.support.v4.widget.NestedScrollView>
