@@ -3,19 +3,30 @@ package com.princeodzalasapp.fr.wmandroidui.Utiles;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.DatePicker;
+
+import com.princeodzalasapp.fr.wmandroidui.R;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class Systeme {
+public class Systeme extends Activity {
+
+    public static void test(){
+
+
+    }
 
     public static int DpToPx(int valeurDp, Context mContext){
         final float scale = mContext.getResources().getDisplayMetrics().density;

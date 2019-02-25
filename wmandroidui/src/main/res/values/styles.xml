@@ -4,12 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
 
     <!-- STYLES -->
-    <style name="MdTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="MdTheme" parent="Theme.MaterialComponents.Light">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorBackground">@color/colorFondGris</item>
         <item name="colorError">#F44336</item>
+    </style>
+	
+	
+
+    <style name="MdTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="MdThemeMoi" parent="MdTheme">
         <item name="android:statusBarColor">@color/primaryDarkColor</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="colorControlActivated">@color/colorControlActivated</item>
@@ -36,21 +47,24 @@
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">normal</item>
         <item name="android:text">sans-serif</item>
-
         <item name="dialogTheme">@style/Mdheme.Dialog.Green</item>
         <item name="alertDialogTheme">@style/Mdheme.Dialog.Alert.Green</item>
-    </style>
-
-    <style name="MdTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/primaryDarkColor</item>
     </style>
 
     <style name="MdThemeColor" parent="MdTheme">
         <item name="colorButtonNormal">@color/primaryDarkColor</item>
         <item name="colorControlHighlight">@color/primaryColor</item>
     </style>
+	
+	<style name="DatePickerDialogCustom" parent="@style/Theme.AppCompat.Dialog">
+		<item name="android:colorBackground">#FFFFFF</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:datePickerStyle">@style/DatePickerCustom</item>
+	</style>
+	
+	<style name="DatePickerCustom" parent="@android:style/Widget.Material.DatePicker">
+		<item name="android:headerBackground">@color/primaryColor</item>
+	</style>
 
     <style name="Mdheme.Dialog.Green" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorPrimary">@color/primaryColor</item>
