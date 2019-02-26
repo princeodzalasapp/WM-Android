@@ -4,4 +4,6 @@
     <string name="carte_bancaire">Carte Bancaire</string>
     <string name="veuillez_selectionner_le_mode_de_paiement">Veuillez selectionner le mode de paiement:</string>
     <string name="prix_total_257_99">Prix Total : 257,99€</string>
+    <string name="titre">Titre</string>
+    <string name="description">Description</string>
 </resources>
