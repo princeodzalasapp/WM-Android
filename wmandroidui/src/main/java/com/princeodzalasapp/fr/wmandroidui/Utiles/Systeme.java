@@ -16,12 +16,16 @@ import com.princeodzalasapp.fr.wmandroidui.R;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
-public class Systeme extends Activity {
+import fr.pcsoft.wdjava.api.WDAPIDialogue;
+import fr.pcsoft.wdjava.core.types.*;
+import fr.pcsoft.wdjava.core.*;
+import fr.pcsoft.wdjava.core.application.*;
+
+import static com.princeodzalasapp.fr.wmandroidui.Utiles.Windev.getActiviteEnCours;
+
+public class Systeme extends WDCollProc {
 
     public static void test(){
 
@@ -64,24 +68,30 @@ public class Systeme extends Activity {
         return dateString;
     }
 
-    public static <T extends View> List<T> findViewsWithType(View root, Class<T> type) {
-        List<T> views = new ArrayList<>();
-        findViewsWithType(root, type, views);
-        return views;
-    }
+    public static void sys_statusBar_iconClaire(String mProcedure){
 
-    private static <T extends View> void findViewsWithType(View view, Class<T> type, List<T> views) {
-        if (type.isInstance(view)) {
-            views.add(type.cast(view));
-        }
-
-        if (view instanceof ViewGroup) {
-            ViewGroup viewGroup = (ViewGroup) view;
-            for (int i = 0; i < viewGroup.getChildCount(); i++) {
-                findViewsWithType(viewGroup.getChildAt(i), type, views);
+        try{
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                View statusbar = getActiviteEnCours().getWindow().getDecorView();
+                int flags = statusbar.getSystemUiVisibility();
+                flags = flags ^ View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+                statusbar.setSystemUiVisibility(flags);
             }
+        } catch ( Exception e ) {
+            appelProcedureWL( "JavaErreur", e.getMessage());
         }
+
     }
 
+    static public void fWD_javaErreur(WDObjet vWD_sMessage ){
+        initExecProcGlobale("JavaErreur");
+        try{
+            vWD_sMessage = WDParametre.traiterParametre(vWD_sMessage, 1, false, 16);
+            // info(sMessage)
+            WDAPIDialogue.info(vWD_sMessage.getString());
+        } finally{
+            finExecProcGlobale();
+        }
+    }
 
 }

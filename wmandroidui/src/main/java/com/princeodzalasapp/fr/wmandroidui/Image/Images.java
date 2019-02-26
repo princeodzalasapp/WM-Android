@@ -1,4 +1,4 @@
-package com.princeodzalasapp.fr.wmandroidui.Utiles;
+package com.princeodzalasapp.fr.wmandroidui.Image;
 
 import android.content.Context;
 import android.graphics.Color;

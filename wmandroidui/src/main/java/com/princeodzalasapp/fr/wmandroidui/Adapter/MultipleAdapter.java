@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.CardView;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,7 +14,7 @@ import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.princeodzalasapp.fr.wmandroidui.R;
-import com.princeodzalasapp.fr.wmandroidui.Utiles.Images;
+import com.princeodzalasapp.fr.wmandroidui.Image.Images;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.princeodzalasapp.fr.wmandroidui.models;
+package com.princeodzalasapp.fr.wmandroidui.Models;
 
 public class MyVideo {
 

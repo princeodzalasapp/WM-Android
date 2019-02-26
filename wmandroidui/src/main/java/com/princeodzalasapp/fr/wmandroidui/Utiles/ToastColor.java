@@ -1,4 +1,4 @@
-package com.princeodzalasapp.fr.wmandroidui;
+package com.princeodzalasapp.fr.wmandroidui.Utiles;
 
 import android.content.Context;
 import android.widget.Toast;

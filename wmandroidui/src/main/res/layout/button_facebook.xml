@@ -6,7 +6,7 @@
 	android:orientation="vertical"
 	android:layout_gravity="center">
 
-	<com.princeodzalasapp.fr.wmandroidui.button.LoginButton
+	<com.princeodzalasapp.fr.wmandroidui.Button.LoginButton
 		android:id="@+id/login_button_fb"
 		android:layout_gravity="center"
 		style="@style/FirebaseUI.Button.AccountChooser.FacebookButton"

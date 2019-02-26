@@ -3,8 +3,8 @@ package com.princeodzalasapp.fr.wmandroidui.Adapter;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.princeodzalasapp.fr.wmandroidui.models.MyListe;
-import com.princeodzalasapp.fr.wmandroidui.models.MyListeIcon;
+import com.princeodzalasapp.fr.wmandroidui.Models.MyListe;
+import com.princeodzalasapp.fr.wmandroidui.Models.MyListeIcon;
 
 public class ValeurAdapter {
 

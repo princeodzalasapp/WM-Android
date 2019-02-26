@@ -1,11 +1,11 @@
 package com.princeodzalasapp.fr.wmandroidui.Adapter;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.princeodzalasapp.fr.wmandroidui.models.MyActus;
-import com.princeodzalasapp.fr.wmandroidui.models.MyListe;
-import com.princeodzalasapp.fr.wmandroidui.models.MyListeIcon;
-import com.princeodzalasapp.fr.wmandroidui.models.MyListeUrl;
-import com.princeodzalasapp.fr.wmandroidui.models.MyVideo;
+import com.princeodzalasapp.fr.wmandroidui.Models.MyActus;
+import com.princeodzalasapp.fr.wmandroidui.Models.MyListe;
+import com.princeodzalasapp.fr.wmandroidui.Models.MyListeIcon;
+import com.princeodzalasapp.fr.wmandroidui.Models.MyListeUrl;
+import com.princeodzalasapp.fr.wmandroidui.Models.MyVideo;
 
 public class MultipleItem implements MultiItemEntity {
 
