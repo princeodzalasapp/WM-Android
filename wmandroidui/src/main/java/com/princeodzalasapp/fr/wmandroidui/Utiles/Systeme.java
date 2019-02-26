@@ -25,7 +25,6 @@ public class Systeme {
 
 
     }
-
     public static int DpToPx(int valeurDp, Context mContext){
         final float scale = mContext.getResources().getDisplayMetrics().density;
         final int dp = (int) ((valeurDp * scale) + 0.5f);
@@ -48,7 +47,6 @@ public class Systeme {
     }
 
     public static String getDateYoutube(String date) {
-
         final String ISO_8601_24H_FULL_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
         @SuppressLint("SimpleDateFormat") DateFormat df = new SimpleDateFormat(ISO_8601_24H_FULL_FORMAT);
         String dateString;
@@ -63,7 +61,6 @@ public class Systeme {
     }
 
     public static void sys_statusBar_iconClaire(Activity mActivity){
-
         try{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 View statusbar = mActivity.getWindow().getDecorView();
