@@ -17,15 +17,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import static com.princeodzalasapp.fr.wmandroidui.Utiles.Windev.appelProcedureWL;
 
-import fr.pcsoft.wdjava.api.WDAPIDialogue;
-import fr.pcsoft.wdjava.core.types.*;
-import fr.pcsoft.wdjava.core.*;
-import fr.pcsoft.wdjava.core.application.*;
-
-import static com.princeodzalasapp.fr.wmandroidui.Utiles.Windev.getActiviteEnCours;
-
-public class Systeme extends WDCollProc {
+public class Systeme {
 
     public static void test(){
 
@@ -68,30 +62,19 @@ public class Systeme extends WDCollProc {
         return dateString;
     }
 
-    public static void sys_statusBar_iconClaire(String mProcedure){
+    public static void sys_statusBar_iconClaire(Activity mActivity){
 
         try{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                View statusbar = getActiviteEnCours().getWindow().getDecorView();
+                View statusbar = mActivity.getWindow().getDecorView();
                 int flags = statusbar.getSystemUiVisibility();
                 flags = flags ^ View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
                 statusbar.setSystemUiVisibility(flags);
             }
         } catch ( Exception e ) {
-            appelProcedureWL( "JavaErreur", e.getMessage());
+            appelProcedureWL( "ErreurCode", e.getMessage());
         }
 
-    }
-
-    static public void fWD_javaErreur(WDObjet vWD_sMessage ){
-        initExecProcGlobale("JavaErreur");
-        try{
-            vWD_sMessage = WDParametre.traiterParametre(vWD_sMessage, 1, false, 16);
-            // info(sMessage)
-            WDAPIDialogue.info(vWD_sMessage.getString());
-        } finally{
-            finExecProcGlobale();
-        }
     }
 
 }
