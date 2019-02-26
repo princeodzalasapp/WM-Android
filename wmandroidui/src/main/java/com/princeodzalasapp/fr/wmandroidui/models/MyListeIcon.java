@@ -34,5 +34,20 @@ public class MyListeIcon {
     public String getCode() { return code; }
     public String getColor() { return color; }
     public String getColorIcon() { return colorIcon; }
+    public void setCode(String code) {
+        this.code = code;
+    }
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+    public void setColor(String color) {
+        this.color = color;
+    }
+    public void setColorIcon(String colorIcon) {
+        this.colorIcon = colorIcon;
+    }
 
 }

@@ -23,5 +23,17 @@ public class MyListeUrl {
     public String getNom() { return nom; }
     public String getCode() { return code; }
     public String getColor() { return color; }
+    public void setCode(String code) {
+        this.code = code;
+    }
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+    public void setColor(String color) {
+        this.color = color;
+    }
 
 }
