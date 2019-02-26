@@ -1,31 +1,25 @@
 package com.princeodzalasapp.fr.wmandroidui.Utiles;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.ContextWrapper;
-import android.graphics.drawable.Drawable;
+import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Build;
+import android.os.PowerManager;
+import android.provider.Settings;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.ImageView;
+import android.widget.Switch;
 
-import com.mikepenz.iconics.IconicsDrawable;
-
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.DpToPx;
+import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
 
 public class Systeme {
 
-    public static void test1(ImageView nlogo, String nImage, Activity mActivity){
-        Drawable mImage =  new IconicsDrawable(getAppContext(mActivity), nImage);
-        nlogo.setImageDrawable(mImage);
-    }
-
-    public static void sys_statusBar_iconClaire(Activity mActivity){
+    public static void sys_statusBarClaire(Activity mActivity){
         try{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 View statusbar = mActivity.getWindow().getDecorView();
@@ -38,43 +32,85 @@ public class Systeme {
         }
     }
 
-    public static int DpToPx(int valeurDp, Context mContext){
-        final float scale = mContext.getResources().getDisplayMetrics().density;
-        final int dp = (int) ((valeurDp * scale) + 0.5f);
-        return dp;
+    public static void sys_statusBarSombre(Activity mActivity){
+        try{
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                View statusbar = mActivity.getWindow().getDecorView();
+                statusbar.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            }
+        } catch ( Exception e ) {
+            ErreurJava.set(mActivity, e.getMessage());
+        }
     }
 
-    public static void ActionBarOmbreElevation(int elevation, Context mContext, Activity mActivity){
+    public static void sys_activeGPS(Activity mActivity){
+        try{
+            mActivity.startActivityForResult(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS), 1);
+        } catch ( Exception e ) {
+            ErreurJava.set(mActivity, e.getMessage());
+        }
+    }
+
+    public static boolean sys_enModeEconomie(Activity mActivity){
+        PowerManager powerManager = (PowerManager) mActivity.getSystemService(Context.POWER_SERVICE);
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && powerManager.isPowerSaveMode()) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void sys_actionBarOmbreElevation(int elevation, Activity mActivity){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             View actionbar;
-            // Récupération de l'action bar
             Window window = mActivity.getWindow();
             View v = window.getDecorView();
-            int resId = mContext.getResources().getIdentifier("action_bar_container", "id", "android");
+            int resId = getAppContext(mActivity).getResources().getIdentifier("action_bar_container", "id", "android");
             actionbar = v.findViewById(resId);
-            // Changement de l'élévation pour supprimer l'ombre
             if (actionbar != null){
-                actionbar.setElevation(DpToPx(elevation, mContext));
+                actionbar.setElevation(DpToPx(elevation, getAppContext(mActivity)));
             }
         }
     }
 
-    public static String getDateYoutube(String date) {
-        final String ISO_8601_24H_FULL_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
-        @SuppressLint("SimpleDateFormat") DateFormat df = new SimpleDateFormat(ISO_8601_24H_FULL_FORMAT);
-        String dateString;
-        try {
-            Date d = df.parse(date);
-            dateString = DateFormat.getDateInstance().format(d);
-        } catch (ParseException e) {
-            e.printStackTrace();
-            dateString = "";
+
+    public static boolean sys_couleurInterrupteur(ViewGroup viewGroup,String sCouleur, Activity mActivity){
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return false;
         }
-        return dateString;
-    }
+        try{
+            if (viewGroup == null){
+                return false;
+            }
+            Switch monswitch;
+            int[][] states;
+            int[] colorsThumb;
+            int[] colorsTrack;
+            ColorStateList myListThumb;
+            ColorStateList myListTrack;
+            states = new int[][] { new int[] { android.R.attr.state_checked }, new int[] { -android.R.attr.state_checked  } };
+            colorsThumb = new int[] { Color.parseColor(sCouleur), Color.parseColor("#E8E8E8") };
+            colorsTrack = new int[] { Color.parseColor(sCouleur), Color.parseColor("#000000") };
+            myListThumb = new ColorStateList(states, colorsThumb);
+            myListTrack = new ColorStateList(states, colorsTrack);
 
-    public static Context getAppContext(Activity mActivity){
-        return mActivity.getApplicationContext();
+            for (int i = 0; i < viewGroup.getChildCount(); i++) {
+                View child = viewGroup.getChildAt(i);
+                try{
+                    monswitch = (Switch) child;
+                    monswitch.setThumbTintList(myListThumb);
+                    monswitch.setTrackTintList(myListTrack);
+                }
+                catch(Exception e) {
+                    ErreurJava.set(mActivity, e.getMessage());
+                    return false;
+                }
+            }
+            return true;
+        }
+        catch(Exception e) {
+            ErreurJava.set(mActivity, e.getMessage());
+            return false;
+        }
     }
-
 }

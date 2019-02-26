@@ -7,9 +7,9 @@ public class Windev extends Application {
     public Windev() {
     }
 
-    public static void appelProcedureWL(String var0, Object... var1) {
-
-    }
+//    public static void appelProcedureWL(String var0, Object... var1) {
+//
+//    }
 
 
 }

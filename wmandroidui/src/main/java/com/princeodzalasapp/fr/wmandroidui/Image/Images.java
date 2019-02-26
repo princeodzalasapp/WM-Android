@@ -1,5 +1,6 @@
 package com.princeodzalasapp.fr.wmandroidui.Image;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -9,6 +10,9 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.mikepenz.iconics.IconicsDrawable;
+import com.princeodzalasapp.fr.wmandroidui.Utiles.ErreurJava;
+
+import static com.princeodzalasapp.fr.wmandroidui.Utiles.Systeme.getAppContext;
 
 public class Images {
 
@@ -41,6 +45,16 @@ public class Images {
     public static Drawable getIconicsDrawable(String nomImage, Context mContext){
         Drawable mImage =  new IconicsDrawable(mContext, nomImage);
         return  mImage;
+    }
+
+    public static int getIdImageRessource(Activity mActivity, String mImageRessource){
+        try{
+            return getAppContext(mActivity).getResources().getIdentifier(mImageRessource, "drawable",getAppContext(mActivity).getPackageName() );
+        } catch ( Exception e ) {
+            ErreurJava.set(mActivity, e.getMessage());
+            return 0;
+        }
+
     }
 
 }
