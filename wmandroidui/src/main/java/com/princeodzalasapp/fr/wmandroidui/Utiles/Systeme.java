@@ -25,16 +25,16 @@ public class Systeme {
         nlogo.setImageDrawable(mImage);
     }
 
-    public static void test2(Context mContext){
+    public static void sys_statusBar_iconClaire(Activity mActivity){
         try{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                View statusbar = getActiviteEnCours(mContext).getWindow().getDecorView();
+                View statusbar = mActivity.getWindow().getDecorView();
                 int flags = statusbar.getSystemUiVisibility();
                 flags = flags ^ View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
                 statusbar.setSystemUiVisibility(flags);
             }
         } catch ( Exception e ) {
-            ToastColor.erreur(e.getMessage(), mContext);
+            ErreurJava.set(mActivity, e.getMessage());
         }
     }
 
@@ -71,33 +71,6 @@ public class Systeme {
             dateString = "";
         }
         return dateString;
-    }
-
-    public static void sys_statusBar_iconClaire(Activity mActivity){
-        try{
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                View statusbar = mActivity.getWindow().getDecorView();
-                int flags = statusbar.getSystemUiVisibility();
-                flags = flags ^ View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-                statusbar.setSystemUiVisibility(flags);
-            }
-        } catch ( Exception e ) {
-            //appelProcedureWL("ErreurCode", e.getMessage());
-        }
-
-    }
-
-    public static Activity getActiviteEnCours(Context context){
-        if (context == null){
-            return null;
-        } else if (context instanceof ContextWrapper){
-            if (context instanceof Activity){
-                return (Activity) context;
-            } else{
-                return getActiviteEnCours(((ContextWrapper) context).getBaseContext());
-            }
-        }
-        return null;
     }
 
     public static Context getAppContext(Activity mActivity){
