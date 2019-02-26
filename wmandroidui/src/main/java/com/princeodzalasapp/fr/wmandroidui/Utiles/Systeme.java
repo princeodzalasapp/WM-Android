@@ -4,45 +4,37 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.DatePicker;
 import android.widget.ImageView;
 
 import com.mikepenz.iconics.IconicsDrawable;
-import com.princeodzalasapp.fr.wmandroidui.R;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import static com.princeodzalasapp.fr.wmandroidui.Utiles.Windev.appelProcedureWL;
-import static com.princeodzalasapp.fr.wmandroidui.Utiles.Windev.getAppContext;
+
 
 public class Systeme {
 
-    public static void test1(){
-        appelProcedureWL("ErreurCode", "Test appelProcedureWL");
-    }
-    public static void test2(ImageView nlogo, String nImage){
-        Drawable mImage =  new IconicsDrawable(getAppContext(), nImage);
+    public static void test1(ImageView nlogo, String nImage, Activity mActivity){
+        Drawable mImage =  new IconicsDrawable(getAppContext(mActivity), nImage);
         nlogo.setImageDrawable(mImage);
     }
-    public static void test3(){
+
+    public static void test2(Context mContext){
         try{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                View statusbar = getActiviteEnCours().getWindow().getDecorView();
+                View statusbar = getActiviteEnCours(mContext).getWindow().getDecorView();
                 int flags = statusbar.getSystemUiVisibility();
                 flags = flags ^ View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
                 statusbar.setSystemUiVisibility(flags);
             }
         } catch ( Exception e ) {
-            appelProcedureWL("ErreurCode", e.getMessage());
+            ToastColor.erreur(e.getMessage(), mContext);
         }
     }
 
@@ -90,27 +82,26 @@ public class Systeme {
                 statusbar.setSystemUiVisibility(flags);
             }
         } catch ( Exception e ) {
-            appelProcedureWL("ErreurCode", e.getMessage());
+            //appelProcedureWL("ErreurCode", e.getMessage());
         }
 
     }
 
-    public static Activity getActiviteEnCours(){
-        Context context = (Context) getAppContext();
-        return getAct(context);
-    }
-
-    public static Activity getAct(Context context){
+    public static Activity getActiviteEnCours(Context context){
         if (context == null){
             return null;
         } else if (context instanceof ContextWrapper){
             if (context instanceof Activity){
                 return (Activity) context;
             } else{
-                return getAct(((ContextWrapper) context).getBaseContext());
+                return getActiviteEnCours(((ContextWrapper) context).getBaseContext());
             }
         }
         return null;
+    }
+
+    public static Context getAppContext(Activity mActivity){
+        return mActivity.getApplicationContext();
     }
 
 }
