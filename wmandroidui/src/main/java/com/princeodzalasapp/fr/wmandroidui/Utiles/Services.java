@@ -19,7 +19,7 @@ public class Services {
     }
 
     @SuppressLint("ResourceType")
-    public static String getIdViewD(View view) {
+    public static String getIdView(View view) {
         if (view.getId() == 0xffffffff) return "no-id";
         else return view.getResources().getResourceName(view.getId());
     }

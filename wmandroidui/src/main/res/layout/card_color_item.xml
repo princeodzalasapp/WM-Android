@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_gravity="top"
+                android:text="@string/titre"
+                style="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/sous_titre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="50dp"
+                android:layout_gravity="bottom"
+                android:text="@string/titre"
+                style="@style/Base.TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="24dp"
+                android:background="@drawable/ic_content_copy_black_24dp"
+                android:backgroundTint="@color/black"
+                android:layout_gravity="bottom|end"
+                android:scaleType="centerCrop"/>
+
+        </LinearLayout>
+</android.support.design.card.MaterialCardView>
