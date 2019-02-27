@@ -18,7 +18,7 @@ import com.princeodzalasapp.fr.wmandroidui.Image.Images;
 
 import java.util.ArrayList;
 
-import static com.princeodzalasapp.fr.wmandroidui.Utiles.Systeme.getDateYoutube;
+import static com.princeodzalasapp.fr.wmandroidui.Utiles.Date.getDateYoutube;
 
 public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, BaseViewHolder> {
 

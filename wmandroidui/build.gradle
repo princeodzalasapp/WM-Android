@@ -64,8 +64,8 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45'
     implementation 'com.github.stfalcon:chatkit:0.3.3'
 
-    implementation 'com.afollestad.material-dialogs:core:2.0.3'
-    implementation 'com.afollestad.material-dialogs:color:2.0.3'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
 
 
     testImplementation 'junit:junit:4.12'

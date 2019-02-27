@@ -12,7 +12,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.princeodzalasapp.fr.wmandroidui.Utiles.ErreurJava;
 
-import static com.princeodzalasapp.fr.wmandroidui.Utiles.Systeme.getAppContext;
+import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
 public class Images {
 

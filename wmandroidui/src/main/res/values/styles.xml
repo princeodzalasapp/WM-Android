@@ -11,8 +11,6 @@
         <item name="android:colorBackground">@color/colorFondGris</item>
         <item name="colorError">#F44336</item>
     </style>
-	
-	
 
     <style name="MdTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -235,6 +233,50 @@
     <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
         <item name="android:windowIsFloating">false</item>
         <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="MdAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MdTheme.Dark" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MdTheme.Custom" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="md_medium_font">@font/product_sans_bold</item>
+        <item name="md_regular_font">@font/product_sans_regular</item>
+        <item name="md_btn_ripple_color">#4035be45</item>
+        <item name="md_btn_positive_selector">@color/primaryDarkColor</item>
+        <item name="md_btn_neutral_selector">@color/primaryDarkColor</item>
+        <item name="md_btn_negative_selector">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="SampleHeader" tools:ignore="NewApi">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="SampleButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="backgroundTint">#80000000</item>
     </style>
 
 </resources>
