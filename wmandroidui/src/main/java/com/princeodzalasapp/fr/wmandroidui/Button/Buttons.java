@@ -13,7 +13,7 @@ import com.princeodzalasapp.fr.wmandroidui.Utiles.ToastColor;
 
 import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
-public class Button {
+public class Buttons {
 
     public static void fb_partageText(final int idParent, final String mText, final Activity mActivity){
 
@@ -52,7 +52,7 @@ public class Button {
             LayoutInflater inflater = mActivity.getLayoutInflater();
             LinearLayout mView = (LinearLayout) inflater.inflate(R.layout.button_facebook,null);
             LoginButton fb = mView.findViewById(R.id.login_button_fb);
-            fb.setText(R.string.fb_partage);
+            fb.setText(R.string.whatsapp);
             fb.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {

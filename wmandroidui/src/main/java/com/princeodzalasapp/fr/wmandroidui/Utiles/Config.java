@@ -16,20 +16,17 @@ public class Config {
     public static final int DARK = R.style.MdTheme_Dark;
     public static final int CUSTOM = R.style.MdTheme_Custom;
 
-    private boolean debugMode = false;
-    private SharedPreferences prefs ;
+    private static boolean debugMode = false;
+    private static SharedPreferences prefs ;
 
-    public void initConfig(Activity mActivity){
+    public static void initConfig(Activity mActivity){
         prefs = mActivity.getSharedPreferences(KEY_PREFS, MODE_PRIVATE);
-    }
-
-    public void iniTheme(Activity mActivity){
         debugMode = prefs.getBoolean(KEY_DEBUG_MODE, false);
         mActivity.setTheme(LIGHT);
         prefs.edit().putString(KEY_THEME,"LIGHT").apply();
     }
 
-    public void changeTheme(Activity mActivity, int num){
+    public static void changeTheme(Activity mActivity, int num){
         if ( num == 1 ){
             mActivity.setTheme(LIGHT);
             prefs.edit().putString(KEY_THEME,"LIGHT").apply();
