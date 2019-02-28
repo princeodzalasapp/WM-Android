@@ -19,7 +19,7 @@ public class TabLayout {
     public static ViewGroup iconD(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
-            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon3,null);
+            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon2,null);
             CardView mCardView1 = fen.findViewById(R.id.card1);
             CardView mCardView2 = fen.findViewById(R.id.card2);
             final ImageView TabMenu_logo1 = fen.findViewById(R.id.Logo1);

@@ -23,6 +23,7 @@ public class Dialogs {
                 .content(mText).show();
     }
     public static void TextTitre(String mTitre, String mText, Activity mActivity){
+        MaterialDialog.SingleButtonCallback singleButtonCallback ;
         new MaterialDialog.Builder(mActivity)
                 .title(mTitre).content(mText).show();
     }
