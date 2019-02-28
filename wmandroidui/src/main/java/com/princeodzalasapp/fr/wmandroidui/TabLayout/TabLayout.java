@@ -16,7 +16,7 @@ import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
 public class TabLayout {
 
-    public static ViewGroup icon2(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
+    public static ViewGroup iconD(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
             CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon3,null);
@@ -51,7 +51,7 @@ public class TabLayout {
         }
     }
 
-    public static void TabScroll2(ViewGroup fen, int onglet, final String[] mColor){
+    public static void TabScrollD(ViewGroup fen, int onglet, final String[] mColor){
         final ImageView TabMenu_logo1 = fen.findViewById(R.id.Logo1);
         final ImageView TabMenu_logo2 = fen.findViewById(R.id.Logo2);
         switch(onglet){
@@ -67,7 +67,7 @@ public class TabLayout {
         }
     }
 
-    public static ViewGroup icon3(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
+    public static ViewGroup iconT(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
             CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon3,null);
@@ -115,7 +115,7 @@ public class TabLayout {
         }
     }
 
-    public static void TabScroll3(ViewGroup fen, int onglet, final String[] mColor){
+    public static void TabScrollT(ViewGroup fen, int onglet, final String[] mColor){
         final ImageView TabMenu_logo1 = fen.findViewById(R.id.Logo1);
         final ImageView TabMenu_logo2 = fen.findViewById(R.id.Logo2);
         final ImageView TabMenu_logo3 = fen.findViewById(R.id.Logo3);
@@ -139,7 +139,7 @@ public class TabLayout {
         }
     }
 
-    public static ViewGroup icon4(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
+    public static ViewGroup iconQ(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
             CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon4,null);
@@ -202,7 +202,7 @@ public class TabLayout {
         }
     }
 
-    public static void TabScroll4(ViewGroup fen, int onglet, final String[] mColor){
+    public static void TabScrollQ(ViewGroup fen, int onglet, final String[] mColor){
         final ImageView TabMenu_logo1 = fen.findViewById(R.id.Logo1);
         final ImageView TabMenu_logo2 = fen.findViewById(R.id.Logo2);
         final ImageView TabMenu_logo3 = fen.findViewById(R.id.Logo3);
@@ -236,7 +236,7 @@ public class TabLayout {
         }
     }
 
-    public static ViewGroup icon5(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
+    public static ViewGroup iconC(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
             CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon5,null);
@@ -316,7 +316,7 @@ public class TabLayout {
         }
     }
 
-    public static void TabScroll5(ViewGroup fen, int onglet, final String[] mColor){
+    public static void TabScrollC(ViewGroup fen, int onglet, final String[] mColor){
         final ImageView TabMenu_logo1 = fen.findViewById(R.id.Logo1);
         final ImageView TabMenu_logo2 = fen.findViewById(R.id.Logo2);
         final ImageView TabMenu_logo3 = fen.findViewById(R.id.Logo3);
@@ -362,7 +362,7 @@ public class TabLayout {
         }
     }
 
-    public static ViewGroup icon6(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
+    public static ViewGroup iconS(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
             CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon6,null);
@@ -461,7 +461,7 @@ public class TabLayout {
         }
     }
 
-    public static void TabScroll6(ViewGroup fen, int onglet, final String[] mColor){
+    public static void TabScrollS(ViewGroup fen, int onglet, final String[] mColor){
         final ImageView TabMenu_logo1 = fen.findViewById(R.id.Logo1);
         final ImageView TabMenu_logo2 = fen.findViewById(R.id.Logo2);
         final ImageView TabMenu_logo3 = fen.findViewById(R.id.Logo3);
