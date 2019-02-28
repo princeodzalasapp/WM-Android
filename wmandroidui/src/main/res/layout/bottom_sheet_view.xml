@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.princeodzalasapp.fr.wmandroidui.Utiles.BottomSheetListView
+    <com.princeodzalasapp.fr.wmandroidui.BottomSheet.BottomSheetListView
         android:id="@+id/BottomSheet_listView"
         android:divider="@color/couleur_diviseur_noir"
         android:dividerHeight="1dp"

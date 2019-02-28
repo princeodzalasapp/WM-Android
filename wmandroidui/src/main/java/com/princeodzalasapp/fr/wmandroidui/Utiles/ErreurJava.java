@@ -2,8 +2,13 @@ package com.princeodzalasapp.fr.wmandroidui.Utiles;
 
 import android.app.Activity;
 import android.support.design.widget.BottomSheetDialog;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 
+import com.princeodzalasapp.fr.wmandroidui.BottomSheet.BottomSheetListView;
 import com.princeodzalasapp.fr.wmandroidui.R;
 
 import java.util.ArrayList;
@@ -29,7 +34,20 @@ public class ErreurJava {
             listView.setAdapter(adapter);
             dialog.show();
         }
-
+        AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View container, int position, long id) {
+                LinearLayout linearLayoutParent = (LinearLayout) container;
+                Button btn = linearLayoutParent.findViewById(R.id.button_fermer);
+                btn.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+            }
+        };
+        listView.setOnItemClickListener(itemClickListener);
     }
 
 

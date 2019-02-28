@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#FFFFFF">
+		   
+	<com.stfalcon.chatkit.messages.MessagesList
+	   android:id="@+id/messagesList"
+	   android:layout_width="match_parent"
+	   android:layout_height="match_parent"
+	   app:textAutoLink="all"
+	   app:incomingTextLinkColor="#35BE45"
+	   app:incomingDefaultBubbleColor="@color/md_grey_10"
+       app:incomingDefaultBubblePressedColor="@color/md_grey_10"
+       app:incomingDefaultBubbleSelectedColor="#1AFF4081"
+	   app:incomingDefaultImageOverlayPressedColor="#00e6e6e6"
+       app:incomingDefaultImageOverlaySelectedColor="#1AFF4081"
+	   app:outcomingTextLinkColor="#CCFFFFFF"
+	   app:outcomingDefaultBubbleColor="#35BE45"
+	   app:outcomingDefaultBubblePressedColor="#35BE45"
+       app:outcomingDefaultBubbleSelectedColor="#1AFF4081"
+	   app:outcomingDefaultImageOverlayPressedColor="#0035BE45"
+       app:outcomingDefaultImageOverlaySelectedColor="#1AFF4081"
+	   android:layout_above="@+id/input" />
+	   
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/input"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#e6e6e6"/>
+	   
+	<com.stfalcon.chatkit.messages.MessageInput
+	    android:id="@+id/input"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		app:showAttachmentButton="true"
+		app:attachmentButtonDefaultIconColor="#35BE45"
+		app:attachmentButtonDefaultIconPressedColor="#2EA73D"
+		app:attachmentButtonBackground="?attr/selectableItemBackgroundBorderless"
+		app:inputButtonDefaultBgColor="#35BE45"
+        app:inputButtonDefaultBgPressedColor="#2EA73D"
+		app:inputButtonHeight="30dp"
+		app:inputButtonMargin="16dp"
+		app:inputButtonWidth="30dp"
+		app:inputMaxLines="20"
+		app:inputHint="Écrire un message..."
+		app:inputTextColor="@color/black"
+		app:inputTextSize="18sp"/>
+	
+</RelativeLayout>

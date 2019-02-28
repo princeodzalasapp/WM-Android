@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="#e6e6e6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="6dp"
+        android:nestedScrollingEnabled="false"
+        android:focusable="false"/>
+		
+	<com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fabmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="32dp"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_fab_label=""
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_24dp"
+            android:tint="@color/couleur_blanc"
+            app:fab_size="mini"
+            app:fab_label="Image"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_create_24dp"
+            android:tint="@color/couleur_blanc"
+            app:fab_size="mini"
+            app:fab_label="Écrire"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

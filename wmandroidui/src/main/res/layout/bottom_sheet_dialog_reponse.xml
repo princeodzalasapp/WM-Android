@@ -7,7 +7,7 @@
     android:padding="15dp">
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/info_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
@@ -16,7 +16,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
     <TextView
-        android:id="@+id/tv_detail"
+        android:id="@+id/info_desc"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
@@ -32,16 +32,16 @@
 
         <Button
             android:id="@+id/button_close"
-            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CLOSE" />
+            android:text="@string/non" />
 
         <Button
             android:id="@+id/button_ok"
-            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fermer" />
+            android:text="@string/oui" />
     </LinearLayout>
 </LinearLayout>

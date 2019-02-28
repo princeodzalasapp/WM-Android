@@ -9,4 +9,6 @@
     <string name="fermer">FERMER</string>
     <string name="fb_partage">Partager sur Facebook</string>
     <string name="whatsapp">WhatsApp</string>
+    <string name="oui">OUI</string>
+    <string name="non">NON</string>
 </resources>

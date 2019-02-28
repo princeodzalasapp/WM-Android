@@ -21,8 +21,8 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:scaleType="fitCenter"
             tools:ignore="ContentDescription"
             tools:src="@tools:sample/avatars" />
@@ -33,7 +33,7 @@
             android:layout_height="16dp"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textAlignment="center"
             android:textStyle="bold"
             tools:text="@tools:sample/lorem" />
@@ -51,8 +51,8 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:scaleType="fitCenter"
             tools:ignore="ContentDescription"
             tools:src="@tools:sample/avatars" />
@@ -63,7 +63,7 @@
             android:layout_height="16dp"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:textAlignment="center"
             tools:text="@tools:sample/lorem" />
@@ -81,8 +81,8 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:scaleType="fitCenter"
             tools:ignore="ContentDescription"
             tools:src="@tools:sample/avatars" />
@@ -90,10 +90,10 @@
         <TextView
             android:id="@+id/list_titre3"
             android:layout_width="match_parent"
-            android:layout_height="14dp"
+            android:layout_height="16dp"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:textAlignment="center"
             tools:text="@tools:sample/lorem" />
