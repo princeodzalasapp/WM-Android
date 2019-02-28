@@ -70,7 +70,7 @@ public class StoriesView {
 //        mActivity.startActivity(a);
         mActivity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         LayoutInflater inflater = mActivity.getLayoutInflater();
-        LinearLayout fen = (LinearLayout) inflater.inflate(R.layout.expanding_activity,null);
+        LinearLayout fen = (LinearLayout) inflater.inflate(R.layout.stories_activity,null);
 
         storiesProgressView = (StoriesProgressView) fen.findViewById(R.id.stories);
         storiesProgressView.setStoriesCount(PROGRESS_COUNT);
