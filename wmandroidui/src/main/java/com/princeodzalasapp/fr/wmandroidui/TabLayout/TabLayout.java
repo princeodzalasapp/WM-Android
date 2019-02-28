@@ -19,7 +19,7 @@ public class TabLayout {
     public static ViewGroup icon2(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
-            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_Icon3,null);
+            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon3,null);
             CardView mCardView1 = fen.findViewById(R.id.card1);
             CardView mCardView2 = fen.findViewById(R.id.card2);
             final ImageView TabMenu_logo1 = fen.findViewById(R.id.Logo1);
@@ -70,7 +70,7 @@ public class TabLayout {
     public static ViewGroup icon3(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
-            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_Icon3,null);
+            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon3,null);
             CardView mCardView1 = fen.findViewById(R.id.card1);
             CardView mCardView2 = fen.findViewById(R.id.card2);
             CardView mCardView3 = fen.findViewById(R.id.card3);
@@ -142,7 +142,7 @@ public class TabLayout {
     public static ViewGroup icon4(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
-            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_Icon4,null);
+            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon4,null);
             CardView mCardView1 = fen.findViewById(R.id.card1);
             CardView mCardView2 = fen.findViewById(R.id.card2);
             CardView mCardView3 = fen.findViewById(R.id.card3);
@@ -239,7 +239,7 @@ public class TabLayout {
     public static ViewGroup icon5(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
-            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_Icon5,null);
+            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon5,null);
             CardView mCardView1 = fen.findViewById(R.id.card1);
             CardView mCardView2 = fen.findViewById(R.id.card2);
             CardView mCardView3 = fen.findViewById(R.id.card3);
@@ -365,7 +365,7 @@ public class TabLayout {
     public static ViewGroup icon6(int idParent,final String[] mIcons, final String[] mColor, Activity mActivity){
         try {
             LayoutInflater inflater = mActivity.getLayoutInflater();
-            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_Icon6,null);
+            CardView fen = (CardView) inflater.inflate(R.layout.tab_layout_icon6,null);
             CardView mCardView1 = fen.findViewById(R.id.card1);
             CardView mCardView2 = fen.findViewById(R.id.card2);
             CardView mCardView3 = fen.findViewById(R.id.card3);

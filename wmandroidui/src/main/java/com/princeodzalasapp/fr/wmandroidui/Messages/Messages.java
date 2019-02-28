@@ -137,6 +137,7 @@ public class Messages {
                     reponseConversation[2] = message.getUser().getName();
                 }
             });
+
             messagesList.setAdapter(messagesAdapter);
 //
             MessageInput input = fen.findViewById(R.id.input);
