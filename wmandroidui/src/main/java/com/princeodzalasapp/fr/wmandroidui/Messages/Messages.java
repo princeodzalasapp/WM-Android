@@ -15,6 +15,7 @@ import com.princeodzalasapp.fr.wmandroidui.Models.Message;
 import com.princeodzalasapp.fr.wmandroidui.Models.User;
 import com.princeodzalasapp.fr.wmandroidui.R;
 import com.princeodzalasapp.fr.wmandroidui.Utiles.ErreurJava;
+import com.princeodzalasapp.fr.wmandroidui.Utiles.ToastColor;
 import com.stfalcon.chatkit.commons.ImageLoader;
 import com.stfalcon.chatkit.dialogs.DialogsList;
 import com.stfalcon.chatkit.dialogs.DialogsListAdapter;
@@ -23,8 +24,10 @@ import com.stfalcon.chatkit.messages.MessagesList;
 import com.stfalcon.chatkit.messages.MessagesListAdapter;
 
 import java.security.SecureRandom;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
@@ -183,6 +186,37 @@ public class Messages {
         return new Message(getRandomId(), mUser, text);
     }
 
+    public static void MessageCopy(MessagesListAdapter<Message> mAdapter, final Activity mActivity){
+        mAdapter.copySelectedMessagesText(mActivity, getMessageStringFormatter(), true);
+        ToastColor.succes("Copier !", getAppContext(mActivity));
+    }
+
+    public static void MessageDeselect(MessagesListAdapter<Message> mAdapter){
+        if (selectionCount != 0) {
+            mAdapter.unselectAllItems();
+        }
+
+    }
+
+    public static void MessageSup(MessagesListAdapter<Message> mAdapter){
+        mAdapter.deleteSelectedMessages();
+    }
+
+    public static MessagesListAdapter.Formatter<Message> getMessageStringFormatter() {
+        return new MessagesListAdapter.Formatter<Message>() {
+            @Override
+            public String format(Message message) {
+                String createdAt = new SimpleDateFormat("MMM d, EEE 'à' h:mm a", Locale.getDefault())
+                        .format(message.getCreatedAt());
+
+                String text = message.getText();
+                if (text == null) text = "[Pièce jointe]";
+
+                return String.format(Locale.getDefault(), "%s: %s (%s)",
+                        message.getUser().getName(), text, createdAt);
+            }
+        };
+    }
 
     public static SecureRandom rnd = new SecureRandom();
 
