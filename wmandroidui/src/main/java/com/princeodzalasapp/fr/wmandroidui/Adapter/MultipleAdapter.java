@@ -158,18 +158,16 @@ public class MultipleAdapter extends BaseMultiItemQuickAdapter<MultipleItem, Bas
             case MultipleItem.TEXT_ICON:
                 TextView snom5 = helper.getView(R.id.list_titre);
                 ImageView simageUrl5 = helper.getView(R.id.list_logo);
-                snom5.setText(item.getListeUrl().getNom());
-                Images.setIcon(simageUrl5, item.getListeUrl().getImageUrl(), mContext);
-                //Glide.with(mContext).load(item.getListeUrl().getImageUrl()).into(simageUrl5);
-                if (item.getListeUrl().getColor() != null ) snom5.setTextColor(Color.parseColor(item.getListeUrl().getColor()));
+                snom5.setText(item.getListeIcon().getNom());
+                Images.setIcon(simageUrl5, item.getListeIcon().getImageUrl(), mContext);
+                if (item.getListeIcon().getColor() != null ) snom5.setTextColor(Color.parseColor(item.getListeIcon().getColor()));
                 break;
             case MultipleItem.TEXT_ICON_BLANC:
                 TextView snom6 = helper.getView(R.id.list_titre);
                 ImageView simageUrl6 = helper.getView(R.id.list_logo);
-                snom6.setText(item.getListeUrl().getNom());
-                Images.setIcon(simageUrl6, item.getListeUrl().getImageUrl(), mContext);
-                //Glide.with(mContext).load(item.getListeUrl().getImageUrl()).into(simageUrl6);
-                if (item.getListeUrl().getColor() != null ) snom6.setTextColor(Color.parseColor(item.getListeUrl().getColor()));
+                snom6.setText(item.getListeIcon().getNom());
+                Images.setIcon(simageUrl6, item.getListeIcon().getImageUrl(), mContext);
+                if (item.getListeIcon().getColor() != null ) snom6.setTextColor(Color.parseColor(item.getListeIcon().getColor()));
                 break;
             case MultipleItem.PUB_HAUT:
                 break;
