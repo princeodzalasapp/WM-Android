@@ -10,6 +10,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorBackground">@color/colorFondGris</item>
         <item name="colorError">#F44336</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="MdTheme.NoActionBar">

@@ -43,6 +43,7 @@ public class ErreurJava {
                     @Override
                     public void onClick(View v) {
                         dialog.dismiss();
+                        dialog.cancel();
                     }
                 });
             }

@@ -69,6 +69,7 @@ dependencies {
     implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
 
     implementation 'com.github.ksoichiro:android-observablescrollview:1.6.0'
+    implementation 'com.roughike:bottom-bar:2.3.1'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

@@ -49,7 +49,7 @@ public class BottomSheet {
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View arg0) {
-                        dialog.dismiss();
+                        dialog.cancel();
                     }
                 });
                 return v;
