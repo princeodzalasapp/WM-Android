@@ -8,8 +8,8 @@ android:layout_height="wrap_content">
 
 <ImageView
     android:id="@+id/list_logo"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
     tools:src="@tools:sample/avatars"
     tools:ignore="ContentDescription" />
 <TextView
