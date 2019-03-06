@@ -80,8 +80,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'com.github.shts:StoriesProgressView:3.0.0'
-    implementation 'de.mrmaffen:libvlc-android:2.1.12@aar'
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
+    //implementation 'de.mrmaffen:libvlc-android:2.1.12@aar'
+    //implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
