@@ -35,7 +35,7 @@ import java.util.ArrayList;
 
 import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
-public class Videos {
+public class Vid {
 
     private static String mFilePath = "rtmp://rrbalancer.broadcast.tneg.de:1935/pw/ruk/ruk";
     private static SurfaceView mSurface;
