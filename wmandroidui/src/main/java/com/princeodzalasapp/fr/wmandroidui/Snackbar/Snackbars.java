@@ -165,15 +165,6 @@ public class Snackbars {
         if(rootView != null) Snack.success(rootView, nMessage, Snack.LENGTH_LONG).show();
     }
 
-    public static void test(String nMessage,String mAction1, Activity mActivity) {
-        Snackbars.snackbar = Snackbars.IndefiniAction(nMessage,mActivity);
-        Snackbars.snackbar.setAction(mAction1, new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        }).show();
-    }
 
 
 
