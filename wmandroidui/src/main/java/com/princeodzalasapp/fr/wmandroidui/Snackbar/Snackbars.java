@@ -11,7 +11,7 @@ import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getRootView;
 
 public class Snackbars {
 
-    private static android.support.design.widget.Snackbar snackbar;
+    public static android.support.design.widget.Snackbar snackbar;
 
     public static void Long(String nMessage, Activity mActivity) {
         final View rootView = getRootView(mActivity);
@@ -163,6 +163,16 @@ public class Snackbars {
     public static void SuccessLong(String nMessage, Activity mActivity) {
         final View rootView = getRootView(mActivity);
         if(rootView != null) Snack.success(rootView, nMessage, Snack.LENGTH_LONG).show();
+    }
+
+    public static void test(String nMessage,String mAction1, Activity mActivity) {
+        Snackbars.snackbar = Snackbars.IndefiniAction(nMessage,mActivity);
+        Snackbars.snackbar.setAction(mAction1, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        }).show();
     }
 
 
