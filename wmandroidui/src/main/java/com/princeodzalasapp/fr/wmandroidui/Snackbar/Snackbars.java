@@ -11,6 +11,8 @@ import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getRootView;
 
 public class Snackbars {
 
+    private static android.support.design.widget.Snackbar snackbar;
+
     public static void Long(String nMessage, Activity mActivity) {
         final View rootView = getRootView(mActivity);
         if(rootView != null) Snackbar.make(rootView, nMessage, Snackbar.LENGTH_LONG).show();
@@ -118,5 +120,52 @@ public class Snackbars {
         snackbar.setActionTextColor(Color.parseColor(sColorActionText));
         return snackbar;
     }
+
+    //  Short Snackbar No Action
+    public static void infoShort(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.info(rootView, nMessage, Snack.LENGTH_SHORT).show();
+    }
+    public static void warningShort(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.warning(rootView, nMessage, Snack.LENGTH_SHORT).show();
+    }
+    public static void errorShort(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.error(rootView, nMessage, Snack.LENGTH_SHORT).show();
+    }
+    public static void normalShort(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.normal(rootView, nMessage, Snack.LENGTH_SHORT).show();
+    }
+    public static void SuccessShort(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.success(rootView, nMessage, Snack.LENGTH_SHORT).show();
+    }
+
+    //  Long Snackbar No Action
+    public static void infoLong(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.info(rootView, nMessage, Snack.LENGTH_LONG).show();
+    }
+    public static void warningLong(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.warning(rootView, nMessage, Snack.LENGTH_LONG).show();
+    }
+    public static void errorLong(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.error(rootView, nMessage, Snack.LENGTH_LONG).show();
+    }
+    public static void normalLong(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.normal(rootView, nMessage, Snack.LENGTH_LONG).show();
+    }
+    public static void SuccessLong(String nMessage, Activity mActivity) {
+        final View rootView = getRootView(mActivity);
+        if(rootView != null) Snack.success(rootView, nMessage, Snack.LENGTH_LONG).show();
+    }
+
+
+
 
 }
