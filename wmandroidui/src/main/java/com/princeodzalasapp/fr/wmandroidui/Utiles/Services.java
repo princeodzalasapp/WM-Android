@@ -3,10 +3,14 @@ package com.princeodzalasapp.fr.wmandroidui.Utiles;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.support.v4.content.res.ResourcesCompat;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.princeodzalasapp.fr.wmandroidui.R;
@@ -18,6 +22,11 @@ import org.json.JSONObject;
 import java.lang.reflect.Array;
 import java.util.Collection;
 import java.util.Map;
+
+import android.content.res.TypedArray;
+import android.graphics.Color;
+
+import java.util.Random;
 
 import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
@@ -56,6 +65,22 @@ public class Services {
         myTextView.setTypeface(typeface);
     }
 
+
+    public static int dpToPx(Context c, int dp) {
+        Resources r = c.getResources();
+        return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+
+    public static int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
+    public static int px2dip(Context context, float pxValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
     public static int dp2px(Context context, float dpValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
@@ -79,6 +104,44 @@ public class Services {
             }
         }
         return object;
+    }
+
+    private static Random r = new Random();
+
+    public static int randInt(int max) {
+        return r.nextInt(max);
+    }
+
+    public static int getColor(Context ctx) {
+        int returnColor = Color.WHITE;
+        int arrayId = ctx.getResources().getIdentifier("mdcolor_random", "array", ctx.getPackageName());
+
+        if (arrayId != 0) {
+            TypedArray colors = ctx.getResources().obtainTypedArray(arrayId);
+            int index = (int) (Math.random() * colors.length());
+            returnColor = colors.getColor(index, Color.GRAY);
+            colors.recycle();
+        }
+        return returnColor;
+    }
+
+    public static int getColor(Context ctx, String str, int index) {
+        int returnColor = Color.WHITE;
+        int arrayId = ctx.getResources().getIdentifier("mdcolor_random", "array", ctx.getPackageName());
+
+        if (arrayId != 0) {
+            TypedArray colors = ctx.getResources().obtainTypedArray(arrayId);
+            int idx = index;
+            while (idx >= colors.length()) {
+                idx = idx - 5;
+            }
+            while (idx < 0) {
+                idx = idx + 2;
+            }
+            returnColor = colors.getColor(idx, Color.GRAY);
+            colors.recycle();
+        }
+        return returnColor;
     }
 
     public static JSONArray collectionToJson(Collection data){
@@ -133,6 +196,47 @@ public class Services {
         }
         catch (Exception ignored){}
         return null;
+    }
+
+    /**
+     * Handling the keyboard on device
+     *
+     * @param activity
+     */
+    private static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager =
+                (InputMethodManager) activity.getSystemService(
+                        Activity.INPUT_METHOD_SERVICE);
+        if (activity.getCurrentFocus() != null && activity.getCurrentFocus().getWindowToken() != null) {
+            inputMethodManager.hideSoftInputFromWindow(
+                    activity.getCurrentFocus().getWindowToken(), 0);
+        }
+    }
+
+    /**
+     * Handling the listener to dismiss the keyboard on device
+     *
+     * @param context <br>
+     * @param view    is parent view <br>
+     */
+    @SuppressLint("ClickableViewAccessibility")
+    public static void setupDismissKeyboardListener(Context context, View view) {
+
+        // Set up touch listener for non-text box views to hide keyboard.
+        if (!(view instanceof EditText)) {
+            view.setOnTouchListener((v, event) -> {
+                hideSoftKeyboard((Activity) context);
+                return false;
+            });
+        }
+
+        //If a layout container, iterate over children and seed recursion.
+        if (view instanceof ViewGroup) {
+            for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
+                View innerView = ((ViewGroup) view).getChildAt(i);
+                setupDismissKeyboardListener(context, innerView);
+            }
+        }
     }
 
 }

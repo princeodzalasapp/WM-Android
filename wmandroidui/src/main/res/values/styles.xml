@@ -50,6 +50,17 @@
         <item name="alertDialogTheme">@style/Mdheme.Dialog.Alert.Green</item>
     </style>
 
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/couleur_gris600</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="MdThemeColor" parent="MdTheme">
         <item name="colorButtonNormal">@color/primaryDarkColor</item>
         <item name="colorControlHighlight">@color/primaryColor</item>
@@ -279,5 +290,21 @@
         <item name="android:layout_marginTop">2dp</item>
         <item name="backgroundTint">#80000000</item>
     </style>
+
+    <!--Theme for date picker dialog-->
+    <style name="DatePickerThemeLight" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <!--Theme for time picker dialog-->
+    <style name="TimePickerThemeLight" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+
 
 </resources>
