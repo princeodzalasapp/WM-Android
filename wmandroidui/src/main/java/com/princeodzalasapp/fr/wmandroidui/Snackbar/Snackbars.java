@@ -165,6 +165,13 @@ public class Snackbars {
         if(rootView != null) Snack.success(rootView, nMessage, Snack.LENGTH_LONG).show();
     }
 
+    public static void test() {
+        String[]  donnes = "".split("|");
+        for(int i=0 ; i< donnes.length; i++ ){
+            String nId = donnes[0];
+            String nTitre = donnes[1];
+        }
+    }
 
 
 
