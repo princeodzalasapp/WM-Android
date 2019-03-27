@@ -11,8 +11,6 @@ import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getRootView;
 
 public class Snackbars {
 
-    public static android.support.design.widget.Snackbar snackbar;
-
     public static void Long(String nMessage, Activity mActivity) {
         final View rootView = getRootView(mActivity);
         if(rootView != null) Snackbar.make(rootView, nMessage, Snackbar.LENGTH_LONG).show();
@@ -59,9 +57,10 @@ public class Snackbars {
         final View rootView = getRootView(mActivity);
         if(rootView != null) Snackbar.make(rootView, nMessage, mTemps*1000 ).show();
     }
-    public static Snackbar SecAction(String nMessage,int mTemps, Activity mActivity) {
+    public static void SecAction(String nMessage,int mTemps, Activity mActivity, String mAction, View.OnClickListener mClic) {
         final View rootView = getRootView(mActivity);
-        return Snackbar.make(rootView, nMessage,  mTemps*1000 );
+        Snackbar snackbar = Snackbar.make(rootView, nMessage,  mTemps*1000 );
+        snackbar.setAction(mAction, mClic ).show();
     }
     public static void Indefini(String nMessage,String mAction, Activity mActivity) {
         final View rootView = getRootView(mActivity);
@@ -71,9 +70,10 @@ public class Snackbars {
         }).show();
     }
 
-    public static Snackbar IndefiniAction(String nMessage, Activity mActivity) {
+    public static void IndefiniAction(String nMessage, Activity mActivity, String mAction, View.OnClickListener mClic) {
         final View rootView = getRootView(mActivity);
-        return  Snackbar.make(rootView, nMessage, Snackbar.LENGTH_INDEFINITE);
+        Snackbar snackbar = Snackbar.make(rootView, nMessage, Snackbar.LENGTH_INDEFINITE);
+        snackbar.setAction(mAction, mClic ).show();
     }
 
     public static void IndefiniCustomise(String nMessage, String sColorFond, String sColorText, String mAction,String sColorActionText,String sColorAction, Activity mActivity) {
@@ -96,7 +96,7 @@ public class Snackbars {
             snackbar.show();
         }
     }
-    public static Snackbar SecActionCustomise(String nMessage, String sColorFond, String sColorText, String sColorActionText,String sColorAction, int mTemps, Activity mActivity) {
+    public static void SecActionCustomise(String nMessage, String sColorFond, String sColorText, String sColorActionText,String sColorAction, int mTemps, Activity mActivity, String mAction, View.OnClickListener mClic) {
         final View rootView = getRootView(mActivity);
         Snackbar snackbar = Snackbar.make(rootView, nMessage, mTemps*1000);
         View snackBarView = snackbar.getView();
@@ -106,9 +106,9 @@ public class Snackbars {
         Button snackViewButton = (Button) snackBarView.findViewById(android.support.design.R.id.snackbar_action);
         snackViewButton.setBackgroundColor(Color.parseColor(sColorAction));
         snackbar.setActionTextColor(Color.parseColor(sColorActionText));
-        return snackbar;
+        snackbar.setAction(mAction, mClic ).show();
     }
-    public static Snackbar IndefiniActionCustomise(String nMessage, String sColorFond, String sColorText,String sColorActionText,String sColorAction, Activity mActivity) {
+    public static void IndefiniActionCustomise(String nMessage, String sColorFond, String sColorText,String sColorActionText,String sColorAction, Activity mActivity,String mAction, View.OnClickListener mClic) {
         final View rootView = getRootView(mActivity);
         Snackbar snackbar = Snackbar.make(rootView, nMessage, Snackbar.LENGTH_INDEFINITE);
         View snackBarView = snackbar.getView();
@@ -118,7 +118,7 @@ public class Snackbars {
         Button snackViewButton = (Button) snackBarView.findViewById(android.support.design.R.id.snackbar_action);
         snackViewButton.setBackgroundColor(Color.parseColor(sColorAction));
         snackbar.setActionTextColor(Color.parseColor(sColorActionText));
-        return snackbar;
+        snackbar.setAction(mAction, mClic ).show();
     }
 
     //  Short Snackbar No Action
@@ -138,7 +138,7 @@ public class Snackbars {
         final View rootView = getRootView(mActivity);
         if(rootView != null) Snack.normal(rootView, nMessage, Snack.LENGTH_SHORT).show();
     }
-    public static void SuccessShort(String nMessage, Activity mActivity) {
+    public static void successShort(String nMessage, Activity mActivity) {
         final View rootView = getRootView(mActivity);
         if(rootView != null) Snack.success(rootView, nMessage, Snack.LENGTH_SHORT).show();
     }
@@ -160,17 +160,14 @@ public class Snackbars {
         final View rootView = getRootView(mActivity);
         if(rootView != null) Snack.normal(rootView, nMessage, Snack.LENGTH_LONG).show();
     }
-    public static void SuccessLong(String nMessage, Activity mActivity) {
+    public static void successLong(String nMessage, Activity mActivity) {
         final View rootView = getRootView(mActivity);
         if(rootView != null) Snack.success(rootView, nMessage, Snack.LENGTH_LONG).show();
     }
 
     public static void test() {
-        String[]  donnes = "".split("|");
-        for(int i=0 ; i< donnes.length; i++ ){
-            String nId = donnes[0];
-            String nTitre = donnes[1];
-        }
+
+
     }
 
 
