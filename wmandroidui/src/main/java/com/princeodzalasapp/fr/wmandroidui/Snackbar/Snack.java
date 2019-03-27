@@ -183,20 +183,6 @@ public class Snack{
                 ContextCompat.getColor(context, actionTextColorRes));
     }
 
-    /**
-     * Make a customized {@link Snackbar} to display a message without any action.
-     * Method {@link Snack#make(View, CharSequence, Drawable, int, int, int)}.
-     *
-     * @param view The view to find a parent from.
-     * @param text The message to display. Formatted text is supported.
-     * @param textIconRes The left icon of the message. Drawable resource id required.
-     * @param backgroundColorRes The background color of the Snackbar. Color resource id required.
-     * @param textColorRes The color of action message text. Color resource id required.
-     * @param duration How long to show the message.
-     *                 Either {@link Snack#LENGTH_SHORT} or {@link Snack#LENGTH_LONG}.
-     *
-     * @return The customized Snackbar that will be displayed.
-     */
     public static Snackbar make(@NonNull View view, @NonNull CharSequence text, @DrawableRes int textIconRes,
                                 @ColorRes int backgroundColorRes, @ColorRes int textColorRes, int duration) {
         Context context = view.getContext();
@@ -211,22 +197,6 @@ public class Snack{
                 duration);
     }
 
-    /**
-     * Make a customized {@link Snackbar} to display a message without any action.
-     * Method {@link Snack#make(View, CharSequence, Drawable, int, int, int, Drawable, int) }
-     *
-     * @param view The view to find a parent from.
-     * @param text The message to display. Formatted text is supported.
-     * @param textIconRes The left icon of the message. Drawable resource id required.
-     * @param backgroundColorRes The background color of the Snackbar. Color resource id required.
-     * @param textColorRes The color of action message text. Color resource id required.
-     * @param duration How long to show the message.
-     *                 Either {@link Snack#LENGTH_SHORT} or {@link Snack#LENGTH_LONG}.
-     * @param actionIconRes The left icon of action message text. Drawable resource id required.
-     * @param actionTextColorRes The color of action message text. Color resource id required.
-     *
-     * @return The customized Snackbar that will be displayed.
-     */
     public static Snackbar make(@NonNull View view, @NonNull CharSequence text, @DrawableRes int textIconRes,
                                 @ColorRes int backgroundColorRes, @ColorRes int textColorRes,
                                 int duration, @DrawableRes int actionIconRes, @ColorRes int actionTextColorRes) {

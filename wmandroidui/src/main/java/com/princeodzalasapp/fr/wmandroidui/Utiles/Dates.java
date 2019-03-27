@@ -98,12 +98,7 @@ public class Dates {
         return finalTimerString;
     }
 
-    /**
-     * Function to get Progress percentage
-     *
-     * @param currentDuration
-     * @param totalDuration
-     */
+
     public int getProgressSeekBar(long currentDuration, long totalDuration) {
         Double progress = (double) 0;
         // calculating percentage
@@ -113,12 +108,6 @@ public class Dates {
         return progress.intValue();
     }
 
-    /**
-     * Function to change progress to timer
-     *
-     * @param progress - totalDuration
-     *                 returns current duration in milliseconds
-     */
     public int progressToTimer(int progress, int totalDuration) {
         int currentDuration = 0;
         totalDuration = (int) (totalDuration / 1000);

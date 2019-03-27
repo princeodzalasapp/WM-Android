@@ -337,22 +337,11 @@ public class Systeme {
         }
     }
 
-    /**
-     * Check SdCard
-     *
-     * @return true if External Strorage available
-     */
     public static boolean isExtStorageAvailable() {
         return Environment.MEDIA_MOUNTED.equals(Environment
                 .getExternalStorageState());
     }
 
-    /**
-     * Check wifi
-     *
-     * @param context
-     * @return true if Wifi connected
-     */
     public static boolean isWifiConnected(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -364,15 +353,9 @@ public class Systeme {
         return false;
     }
 
-    private static String sFormatEmail = "^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[a-zA-Z]{2,4}$";
-    /**
-     * Check an email is valid or not
-     *
-     * @param email the email need to check
-     * @return {@code true} if valid, {@code false} if invalid
-     */
     public static boolean isValidEmail(Context context, String email) {
         boolean result = false;
+        String sFormatEmail = "^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[a-zA-Z]{2,4}$";
         Pattern pt = Pattern.compile(sFormatEmail);
         Matcher mt = pt.matcher(email);
         if (mt.matches()) {
@@ -381,9 +364,6 @@ public class Systeme {
         return result;
     }
 
-    /**
-     * A method to download json data from url
-     */
     @SuppressWarnings("ThrowFromFinallyBlock")
     public static String JsondownloadUrl(String strUrl) throws IOException {
         String data = "";

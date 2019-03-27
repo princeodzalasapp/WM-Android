@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.support.v4.content.res.ResourcesCompat;
 import android.util.TypedValue;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -198,11 +199,6 @@ public class Services {
         return null;
     }
 
-    /**
-     * Handling the keyboard on device
-     *
-     * @param activity
-     */
     private static void hideSoftKeyboard(Activity activity) {
         InputMethodManager inputMethodManager =
                 (InputMethodManager) activity.getSystemService(
@@ -213,20 +209,17 @@ public class Services {
         }
     }
 
-    /**
-     * Handling the listener to dismiss the keyboard on device
-     *
-     * @param context <br>
-     * @param view    is parent view <br>
-     */
     @SuppressLint("ClickableViewAccessibility")
-    public static void setupDismissKeyboardListener(Context context, View view) {
+    public static void setupDismissKeyboardListener(final Activity mActivity, View view) {
 
         // Set up touch listener for non-text box views to hide keyboard.
         if (!(view instanceof EditText)) {
-            view.setOnTouchListener((v, event) -> {
-                hideSoftKeyboard((Activity) context);
-                return false;
+            view.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    hideSoftKeyboard(mActivity);
+                    return false;
+                }
             });
         }
 
@@ -234,7 +227,7 @@ public class Services {
         if (view instanceof ViewGroup) {
             for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
                 View innerView = ((ViewGroup) view).getChildAt(i);
-                setupDismissKeyboardListener(context, innerView);
+                setupDismissKeyboardListener(mActivity, innerView);
             }
         }
     }
