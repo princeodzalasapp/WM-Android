@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Dialogs {
 
     public static String reponse = "";
-    public static ArrayList<String> Listereponse = new ArrayList<>();
+    public static ArrayList<String> Listereponse = new ArrayList<String>();
 
     public static void Text(String mText, Activity mActivity){
         new MaterialDialog.Builder(mActivity)

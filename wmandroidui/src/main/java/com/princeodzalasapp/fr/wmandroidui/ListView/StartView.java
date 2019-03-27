@@ -28,7 +28,7 @@ public class StartView {
             LayoutInflater inflater = mActivity.getLayoutInflater();
             RelativeLayout fen = (RelativeLayout) inflater.inflate(R.layout.onboarding_main_layout,null);
 
-            ArrayList<PaperOnboardingPage> elements = new ArrayList<>();
+            ArrayList<PaperOnboardingPage> elements = new ArrayList<PaperOnboardingPage>();
             for (int i = 0 ; i < mTitre.length ; i++){
                 elements.add(new PaperOnboardingPage(mTitre[i], mDesc[i], Color.parseColor(mColor[i]), getIdImageRessource(mActivity,mIcon1[i]), getIdImageRessource(mActivity,mIcon2[i])));
             }

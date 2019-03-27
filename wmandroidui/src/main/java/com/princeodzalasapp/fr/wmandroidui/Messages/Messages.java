@@ -56,7 +56,7 @@ public class Messages {
                     Glide.with(mActivity).load(url).into(imageView);
                 }
             };
-            dialogsAdapter  = new DialogsListAdapter<>(imageLoader);
+            dialogsAdapter  = new DialogsListAdapter<Dialog>(imageLoader);
             //Données
             dialogsAdapter.setItems(chats);
             dialogsList.setAdapter(dialogsAdapter);
@@ -100,7 +100,7 @@ public class Messages {
             };
 
             messagesList = fen.findViewById(R.id.messagesList);
-            messagesAdapter = new MessagesListAdapter<>(sIdConversation, imageLoader);
+            messagesAdapter = new MessagesListAdapter<Message>(sIdConversation, imageLoader);
             messagesAdapter.addToStart(msg, true);
             messagesAdapter.enableSelectionMode(new MessagesListAdapter.SelectionListener() {
                 @Override

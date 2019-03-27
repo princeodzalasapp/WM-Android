@@ -22,8 +22,8 @@ public class ErreurJava {
         final BottomSheetDialog dialog = new BottomSheetDialog(mActivity);
         dialog.setContentView(R.layout.bottom_sheet_list_view);
         BottomSheetListView listView = dialog.findViewById(R.id.BottomSheet_listView);
-        List<Map<String, Object>> list = new ArrayList<>();
-        Map<String, Object> map = new HashMap<>();
+        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        Map<String, Object> map = new HashMap<String, Object>();
         map.put("titre", "WM Design Erreur JAVA !");
         map.put("desc", mMessage);
         list.add(map);
