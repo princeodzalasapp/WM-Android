@@ -3,6 +3,8 @@ package com.princeodzalasapp.fr.wmandroidui.Button;
 import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,9 +22,11 @@ import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
 public class EditTexts {
 
-    public static void Blanc(int nIdParent, Activity mActivity){
+    public static View normal(final int idParent, final int idEdit, String mText, String mColorText, Activity mActivity){
 
+        try {
         EditText editText = new EditText(getAppContext(mActivity));
+        editText.setId(idEdit);
         LinearLayout.LayoutParams editTextParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);
@@ -34,26 +38,35 @@ public class EditTexts {
 
         textInputLayout.setLayoutParams(textInputLayoutParams);
         textInputLayout.addView(editText, editTextParams);
-        textInputLayout.setHint("hint");
-
-        //setContentView(textInputLayout);
-    }
-
-    public static View outlined(final int idParent, final int idButton, String mText, String mColorText, String mColor, boolean mEnable, final Activity mActivity){
-        try {
-            LayoutInflater inflater = mActivity.getLayoutInflater();
-            DesignButton btn = (DesignButton) inflater.inflate(R.layout.button_outlined,null);
-            btn.setId(idButton);
-            btn.setText(mText);
-            btn.setTextColor(Color.parseColor(mColorText));
-            btn.setBackgroundColor(Color.parseColor(mColor));
-            btn.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(mColor)));
-            btn.setEnabled(mEnable);
+        textInputLayout.setHint(mText);
+        textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
             ViewGroup parent = mActivity.findViewById(idParent);
             if(parent != null){
-                parent.addView(btn);
+                parent.addView(textInputLayout);
             }
-            return btn;
+            return textInputLayout;
+        } catch ( Exception e ) {
+            ErreurJava.set(mActivity, e.getMessage());
+            return null;
+        }
+    }
+
+    public static View filledBox(final int idParent, final int idEdit, String mText, String mColorText, String mColor, boolean mEnable, final Activity mActivity){
+        try {
+            LayoutInflater inflater = mActivity.getLayoutInflater();
+            TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_fillebox,null);
+            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            TextInputEditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
+            mEdittext.setId(idEdit);
+            mEdittext.setHint(mText);
+            mEdittext.setBackgroundColor(Color.parseColor(mColor));
+            mEdittext.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(mColor)));
+            mEdittext.setEnabled(mEnable);
+            ViewGroup parent = mActivity.findViewById(idParent);
+            if(parent != null){
+                parent.addView(textInputLayout);
+            }
+            return textInputLayout;
         } catch ( Exception e ) {
             ErreurJava.set(mActivity, e.getMessage());
             return null;
