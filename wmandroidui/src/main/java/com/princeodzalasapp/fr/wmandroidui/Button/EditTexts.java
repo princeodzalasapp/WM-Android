@@ -3,20 +3,13 @@ package com.princeodzalasapp.fr.wmandroidui.Button;
 import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 
 import com.princeodzalasapp.fr.wmandroidui.R;
 import com.princeodzalasapp.fr.wmandroidui.Utiles.ErreurJava;
-
-import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.DpToPx;
-import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
 public class EditTexts {
 
@@ -26,7 +19,9 @@ public class EditTexts {
             final TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_normal,null);
             final  EditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
 
-            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            if(mColorText != "" )
+                textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+
             if(mColor != "" )
                 textInputLayout.setBackgroundColor(Color.parseColor(mColor));
             textInputLayout.setHint(mText);
@@ -52,7 +47,9 @@ public class EditTexts {
             final TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_normal,null);
             final  EditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
 
-            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            if(mColorText != "" )
+                textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+
             if(mColor != "" )
                 textInputLayout.setBackgroundColor(Color.parseColor(mColor));
             textInputLayout.setHint(mText);
@@ -78,7 +75,9 @@ public class EditTexts {
             final TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_fillebox,null);
             final  EditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
 
-            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            if(mColorText != "" )
+                textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+
             if(mColor != "" )
                 textInputLayout.setBackgroundColor(Color.parseColor(mColor));
             textInputLayout.setHint(mText);
@@ -104,7 +103,9 @@ public class EditTexts {
             final TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_fillebox_dense,null);
             final  EditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
 
-            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            if(mColorText != "" )
+                textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+
             if(mColor != "" )
                 textInputLayout.setBackgroundColor(Color.parseColor(mColor));
             textInputLayout.setHint(mText);
@@ -130,7 +131,9 @@ public class EditTexts {
             final TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_outlinedbox,null);
             final  EditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
 
-            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            if(mColorText != "" )
+                textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+
             if(mColor != "" )
                 textInputLayout.setBackgroundColor(Color.parseColor(mColor));
             textInputLayout.setHint(mText);
@@ -156,7 +159,9 @@ public class EditTexts {
             final TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_outlinedbox_dense,null);
             final  EditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
 
-            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            if(mColorText != "" )
+                textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+
             if(mColor != "" )
                 textInputLayout.setBackgroundColor(Color.parseColor(mColor));
             textInputLayout.setHint(mText);
@@ -182,7 +187,9 @@ public class EditTexts {
             final TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_outlinedbox_password,null);
             final  EditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
 
-            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            if(mColorText != "" )
+                textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+
             if(mColor != "" )
                 textInputLayout.setBackgroundColor(Color.parseColor(mColor));
             textInputLayout.setHint(mText);
