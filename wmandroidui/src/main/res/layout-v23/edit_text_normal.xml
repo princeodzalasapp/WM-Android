@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.TextInputLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/edit_text_layout"
-    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:errorEnabled="true">
+    android:hint="Username">
 
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nom d'utilisateur" />
+        android:inputType="text"
+        android:maxLines="1" />
 </android.support.design.widget.TextInputLayout>
