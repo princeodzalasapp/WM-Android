@@ -71,5 +71,70 @@ public class EditTexts {
         }
     }
 
+    public static View filledBoxdense(final int idParent, final int idEdit, String mText, String mColorText, String mColor, boolean mEnable, final Activity mActivity){
+        try {
+            LayoutInflater inflater = mActivity.getLayoutInflater();
+            TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_fillebox_dense,null);
+            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            TextInputEditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
+            mEdittext.setId(idEdit);
+            textInputLayout.setHint(mText);
+            mEdittext.setBackgroundColor(Color.parseColor(mColor));
+            mEdittext.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(mColor)));
+            mEdittext.setEnabled(mEnable);
+            ViewGroup parent = mActivity.findViewById(idParent);
+            if(parent != null){
+                parent.addView(textInputLayout);
+            }
+            return textInputLayout;
+        } catch ( Exception e ) {
+            ErreurJava.set(mActivity, e.getMessage());
+            return null;
+        }
+    }
+
+    public static View outlinedbox(final int idParent, final int idEdit, String mText, String mColorText, String mColor, boolean mEnable, final Activity mActivity){
+        try {
+            LayoutInflater inflater = mActivity.getLayoutInflater();
+            TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_outlinedbox,null);
+            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            TextInputEditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
+            mEdittext.setId(idEdit);
+            textInputLayout.setHint(mText);
+            mEdittext.setBackgroundColor(Color.parseColor(mColor));
+            mEdittext.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(mColor)));
+            mEdittext.setEnabled(mEnable);
+            ViewGroup parent = mActivity.findViewById(idParent);
+            if(parent != null){
+                parent.addView(textInputLayout);
+            }
+            return textInputLayout;
+        } catch ( Exception e ) {
+            ErreurJava.set(mActivity, e.getMessage());
+            return null;
+        }
+    }
+
+    public static View outlinedbox_dense(final int idParent, final int idEdit, String mText, String mColorText, String mColor, boolean mEnable, final Activity mActivity){
+        try {
+            LayoutInflater inflater = mActivity.getLayoutInflater();
+            TextInputLayout textInputLayout = (TextInputLayout) inflater.inflate(R.layout.edit_text_outlinedbox_dense,null);
+            textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
+            TextInputEditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
+            mEdittext.setId(idEdit);
+            textInputLayout.setHint(mText);
+            mEdittext.setBackgroundColor(Color.parseColor(mColor));
+            mEdittext.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(mColor)));
+            mEdittext.setEnabled(mEnable);
+            ViewGroup parent = mActivity.findViewById(idParent);
+            if(parent != null){
+                parent.addView(textInputLayout);
+            }
+            return textInputLayout;
+        } catch ( Exception e ) {
+            ErreurJava.set(mActivity, e.getMessage());
+            return null;
+        }
+    }
 
 }
