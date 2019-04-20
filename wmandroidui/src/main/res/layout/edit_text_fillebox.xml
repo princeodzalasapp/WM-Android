@@ -9,12 +9,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textAllCaps="false"
+    android:hint="Nom d'utilisateur"
     app:errorEnabled="true">
 
     <android.support.design.widget.TextInputEditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nom d'utilisateur"
-        tools:ignore="HardcodedText" />
+        android:layout_height="wrap_content"/>
+
 </android.support.design.widget.TextInputLayout>

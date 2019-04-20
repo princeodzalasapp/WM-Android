@@ -18,8 +18,6 @@ import com.princeodzalasapp.fr.wmandroidui.Utiles.ErreurJava;
 import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.DpToPx;
 import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
 
-import static com.princeodzalasapp.fr.wmandroidui.Utiles.Services.getAppContext;
-
 public class EditTexts {
 
     public static View normal(final int idParent, final int idEdit, String mText, String mColorText, Activity mActivity){
@@ -58,7 +56,7 @@ public class EditTexts {
             textInputLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor(mColorText)));
             TextInputEditText mEdittext = textInputLayout.findViewById(R.id.edit_text);
             mEdittext.setId(idEdit);
-            mEdittext.setHint(mText);
+            textInputLayout.setHint(mText);
             mEdittext.setBackgroundColor(Color.parseColor(mColor));
             mEdittext.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(mColor)));
             mEdittext.setEnabled(mEnable);
